@@ -2,9 +2,16 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+  --color-primary: #5B64D9;
+  --color-secondary: #EC6A8D;
+  --color-tertiary: #A645A2;
+  --color-dark: #121214;
+
   --font-primary: 'Questrial', sans-serif;
   --font-secondary: 'Poppins', sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
+  --font-tertiary: 'Roboto Mono', monospace;
   --font-exo: 'Exo 2', sans-serif;
 }

@@ -8,9 +8,14 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxtjs/seo", "@nuxt/icon"],
+  modules: ["@nuxtjs/seo", "@nuxt/icon", "@nuxtjs/color-mode"],
   icon: {
     mode: "css",
     cssLayer: "base",
+  },
+  colorMode: {
+    classSuffix: "",
+    preference: "system",
+    fallback: "light",
   },
 });
