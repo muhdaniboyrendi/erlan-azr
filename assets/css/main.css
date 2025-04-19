@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: #5B64D9;
-  --color-secondary: #EC6A8D;
-  --color-tertiary: #A645A2;
+  --color-primary: #5b64d9;
+  --color-secondary: #ec6a8d;
+  --color-tertiary: #a645a2;
   --color-dark: #121214;
 
-  --font-primary: 'Questrial', sans-serif;
-  --font-secondary: 'Poppins', sans-serif;
-  --font-tertiary: 'Roboto Mono', monospace;
-  --font-exo: 'Exo 2', sans-serif;
+  --font-primary: "Questrial", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+  --font-tertiary: "Roboto Mono", monospace;
+  --font-exo: "Exo 2", sans-serif;
 }
