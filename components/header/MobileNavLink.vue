@@ -1,18 +1,10 @@
 <script setup>
-// import { useRoute } from "vue-router";
-// import ModeToggle from "./ModeToggle.vue";
-
-// const route = useRoute();
-
-// const getNavLinkClass = (routePath) =>
-//   route.path === routePath || route.path.startsWith(`${routePath}/`)
-//     ? "bg-tertiary bg-opacity-80"
-//     : "bg-gray-800 bg-opacity-20 dark:bg-gray-400 dark:bg-opacity-20";
 </script>
 
 <template>
   <div class="flex justify-center gap-4 mt-5 max-w-md mx-auto md:hidden dark:text-white/70">
     <NuxtLink
+      to="/"
       class="flex items-center w-1/2 text-center bg-dark/20 p-3 rounded-full dark:bg-white/10"
     >
       <div class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-dark/30 dark:bg-dark/50">
@@ -32,6 +24,7 @@
       <span class="mt-1 dark:text-text_secondary_dark text-xs">Home</span>
     </NuxtLink>
     <NuxtLink
+      to="/about"
       class="flex items-center w-1/2 text-center bg-dark/20 p-3 rounded-full dark:bg-white/10"
     >
       <div

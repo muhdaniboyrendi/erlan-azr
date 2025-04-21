@@ -5,15 +5,15 @@
     <div
       class="absolute top-0 left-0 h-1 w-full bg-linear-to-r/oklch from-primary to-secondary"
     ></div>
-    <div class="flex mt-1">
-      <div class="w-2/5">
+    <div class="flex flex-wrap mt-1 gap-y-4">
+      <div class="w-full sm:w-2/5 md:w-full lg:w-2/5">
         <img
           src="/projects/ea-invitation.png"
           alt="project"
           class="rounded-md"
         />
       </div>
-      <div class="w-3/5 pl-5">
+      <div class="w-full sm:w-3/5 md:w-full lg:w-3/5 sm:pl-5 md:pl-0 lg:pl-5">
         <h3
           class="text-xl text-dark font-semibold font-secondary mb-2 dark:text-white"
         >

@@ -38,7 +38,7 @@ const hamburgerMenu = () => {
               :class="hamburgerTop"
             ></span>
             <span
-              class="border-t border-b border-dark/90 dark:border-gray-100 block transition-all"
+              class="border-t border-b border-dark/90 dark:border-gray-100 block"
               :class="hamburgerMid"
             ></span>
             <span
@@ -56,10 +56,10 @@ const hamburgerMenu = () => {
           <ul
             class="hidden md:flex p-4 md:p-0 mt-4 font-semibold md:space-x-8 md:flex-row md:mt-0"
           >
-            <HeaderNavLink title="Home" />
-            <HeaderNavLink title="About" />
-            <HeaderNavLink title="Projects" />
-            <HeaderNavLink title="Contact" />
+            <HeaderNavLink title="Home" path="/" />
+            <HeaderNavLink title="About" path="/about" />
+            <HeaderNavLink title="Projects" path="/" />
+            <HeaderNavLink title="Contact" path="/" />
           </ul>
         </div>
       </div>

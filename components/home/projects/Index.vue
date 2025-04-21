@@ -7,5 +7,14 @@
       <HomeProjectsCard />
       <HomeProjectsCard />
     </div>
+    <button
+      class="text-lg text-white mt-15 mx-auto block p-0.5 font-semibold bg-linear-to-br/oklch from-primary to-secondary rounded-full hover:cursor-pointer group"
+    >
+      <div
+        class="bg-white py-2 px-8 lg:py-3 lg:px-12 rounded-full group-hover:bg-transparent group-hover:text-white dark:bg-dark transition"
+      >
+        View All Projects
+      </div>
+    </button>
   </div>
 </template>
