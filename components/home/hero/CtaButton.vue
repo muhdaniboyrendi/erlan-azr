@@ -4,7 +4,7 @@
       class="text-lg p-0.5 font-semibold bg-linear-to-br/oklch from-primary to-secondary rounded-full hover:cursor-pointer group"
     >
       <div
-        class="bg-white/85 py-2 px-8 lg:py-3 lg:px-12 rounded-full group-hover:bg-transparent group-hover:text-white dark:bg-dark transition"
+        class="bg-white/60 py-2 px-8 lg:py-3 lg:px-12 rounded-full group-hover:bg-transparent group-hover:text-white dark:bg-dark transition"
       >
         Learn More
       </div>
@@ -13,7 +13,7 @@
       class="text-lg p-0.5 font-semibold bg-linear-to-br/oklch from-primary to-secondary rounded-full hover:cursor-pointer group"
     >
       <div
-        class="bg-white/85 py-2 px-8 lg:py-3 lg:px-12 rounded-full group-hover:bg-transparent group-hover:text-white dark:bg-dark transition"
+        class="bg-white/60 py-2 px-8 lg:py-3 lg:px-12 rounded-full group-hover:bg-transparent group-hover:text-white dark:bg-dark transition"
       >
         Learn More
       </div>

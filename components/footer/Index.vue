@@ -5,7 +5,7 @@
     >
       <div class="w-full md:w-1/2">
         <a
-          href="#"
+          href="https://github.com/muhdaniboyrendi/erlan-azr"
           target="_blank"
           class="text-sm text-white/80 hover:text-white hover:underline"
           >/source</a
