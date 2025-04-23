@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full px-3 py-10">
+  <div class="w-full px-3 py-5">
     <div
-      class="max-w-6xl mx-auto pt-10 flex flex-wrap justify-center gap-y-5 md:justify-between text-center border-t border-white/20"
+      class="max-w-6xl mx-auto pt-5 flex flex-wrap justify-center gap-y-2 md:justify-between text-center border-t border-white/20"
     >
       <div class="w-full md:w-1/2">
         <a

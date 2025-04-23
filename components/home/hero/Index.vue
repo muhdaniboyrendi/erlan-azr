@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="mx-auto max-w-6xl flex flex-wrap space-y-20 lg:space-y-0 py-16 dark:text-white">
+    <div
+      class="mx-auto max-w-6xl flex flex-wrap space-y-20 lg:space-y-0 py-16 dark:text-white"
+    >
       <div class="w-full lg:w-1/2 px-3 flex items-center">
         <div class="w-full font-secondary">
           <h1 class="text-3xl lg:text-4xl font-semibold mb-3">Hi There,</h1>
@@ -14,12 +16,33 @@
           <h2 class="text-lg lg:text-xl font-secondary mb-10">
             Web Developer | Programmer
           </h2>
-          <div class="flex gap-x-8 text-dark/80 text-2xl bg-dark/8 rounded-2xl p-4 w-fit dark:text-white/80 dark:bg-white/5">
-            <HomeHeroSocialLink link="https://www.instagram.com/erlan.azr_?igsh=MTN3anUxNDZiZjA4MA==" icon="bi bi-instagram" />
-            <HomeHeroSocialLink link="https://github.com/muhdaniboyrendi" icon="bi bi-github" />
-            <HomeHeroSocialLink link="https://www.linkedin.com/in/muhdani-boyrendi/" icon="bi bi-linkedin" />
-            <HomeHeroSocialLink link="https://wa.me/+6282220633024" icon="bi bi-whatsapp" />
-            <HomeHeroSocialLink link="boyrendierlan@gmailcom" icon="bi bi-envelope" />
+          <div
+            class="bg-linear-to-b from-primary to-secondary rounded-2xl p-0.5 w-fit"
+          >
+            <div
+              class="flex gap-x-8 text-dark/80 text-2xl bg-white/80 rounded-2xl p-4 w-fit dark:text-white/80 dark:bg-dark/90"
+            >
+              <HomeHeroSocialLink
+                link="https://www.instagram.com/erlan.azr_?igsh=MTN3anUxNDZiZjA4MA=="
+                icon="bi bi-instagram"
+              />
+              <HomeHeroSocialLink
+                link="https://github.com/muhdaniboyrendi"
+                icon="bi bi-github"
+              />
+              <HomeHeroSocialLink
+                link="https://www.linkedin.com/in/muhdani-boyrendi/"
+                icon="bi bi-linkedin"
+              />
+              <HomeHeroSocialLink
+                link="https://wa.me/+6282220633024"
+                icon="bi bi-whatsapp"
+              />
+              <HomeHeroSocialLink
+                link="boyrendierlan@gmailcom"
+                icon="bi bi-envelope"
+              />
+            </div>
           </div>
         </div>
       </div>

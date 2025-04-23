@@ -23,9 +23,9 @@ const hamburgerMenu = () => {
         <HeaderNavBrand />
         <div class="flex md:order-2 space-x-3 md:space-x-0">
           <div class="hidden md:flex md:space-x-2">
-            <Icon name="hugeicons:sun-03" size="23" class="text-dark dark:text-gray-400" />
+            <Icon name="hugeicons:sun-03" size="23" class="text-dark/70 dark:text-white/70" />
             <HeaderDarkModeToggle />
-            <Icon name="hugeicons:moon-02" size="23" class="text-dark dark:text-gray-400" />
+            <Icon name="hugeicons:moon-02" size="23" class="text-dark/70 dark:text-white/70" />
           </div>
 
           <button
@@ -58,8 +58,8 @@ const hamburgerMenu = () => {
           >
             <HeaderNavLink title="Home" path="/" />
             <HeaderNavLink title="About" path="/about" />
-            <HeaderNavLink title="Projects" path="/" />
-            <HeaderNavLink title="Contact" path="/" />
+            <HeaderNavLink title="Projects" path="/projects" />
+            <HeaderNavLink title="Uses" path="/uses" />
           </ul>
         </div>
       </div>

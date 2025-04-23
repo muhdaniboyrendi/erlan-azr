@@ -21,7 +21,7 @@ const skills = [
 <template>
   <div class="max-w-6xl mx-auto px-3 py-20">
     <h1
-      class="text-4xl z-10 mb-10 text-dark text-center font-bold dark:text-white"
+      class="text-4xl z-10 mb-10 text-dark text-center font-bold font-exo dark:text-white"
     >
       Skills
     </h1>

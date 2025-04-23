@@ -11,7 +11,7 @@
         ></i>
         <div>
           <h1 class="text-xl text-dark font-bold dark:text-white">Instagram</h1>
-          <span class="text-dark/60 text-lg dark:text-white/60">
+          <span class="text-dark/60 md:text-lg dark:text-white/60">
             @erlan.azr_
           </span>
         </div>
@@ -26,12 +26,10 @@
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i
-          class="bi bi-github text-5xl text-dark dark:text-white"
-        ></i>
+        <i class="bi bi-github text-5xl text-dark dark:text-white"></i>
         <div>
           <h1 class="text-xl text-dark font-bold dark:text-white">Github</h1>
-          <span class="text-dark/60 text-lg dark:text-white/60">
+          <span class="text-dark/60 md:text-lg dark:text-white/60">
             muhdaniboyrendi
           </span>
         </div>
@@ -46,13 +44,11 @@
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i
-          class="bi bi-linkedin text-5xl text-[#0A66C2]"
-        ></i>
+        <i class="bi bi-linkedin text-5xl text-[#0A66C2]"></i>
         <div>
           <h1 class="text-xl text-dark font-bold dark:text-white">Linkedin</h1>
-          <span class="text-dark/60 text-lg dark:text-white/60">
-            muhdani boyrendi
+          <span class="text-dark/60 md:text-lg dark:text-white/60">
+            Muhdani Boyrendi Erlan Azhari
           </span>
         </div>
       </div>
@@ -66,12 +62,10 @@
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i
-          class="bi bi-whatsapp text-5xl text-[#25D366]"
-        ></i>
+        <i class="bi bi-whatsapp text-5xl text-[#25D366]"></i>
         <div>
           <h1 class="text-xl text-dark font-bold dark:text-white">Whatsapp</h1>
-          <span class="text-dark/60 text-lg dark:text-white/60">
+          <span class="text-dark/60 md:text-lg dark:text-white/60">
             +62 822-2063-3024
           </span>
         </div>
@@ -86,13 +80,29 @@
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i
-          class="bi bi-envelope text-5xl text-[#D93025]"
-        ></i>
+        <i class="bi bi-envelope text-5xl text-[#D93025]"></i>
         <div>
           <h1 class="text-xl text-dark font-bold dark:text-white">Email</h1>
-          <span class="text-dark/60 text-lg dark:text-white/60">
+          <span class="text-dark/60 md:text-lg dark:text-white/60">
             boyrendierlan@gmail.com
+          </span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a
+    href="https://www.upwork.com/freelancers/~015d196ff7295e98ce?mp_source=share"
+    target="_blank"
+    class="rounded-xl p-3 bg-linear-to-r/oklch from-[#6fda44]/15 to-[#6fda44]/15 hover:cursor-pointer hover:from-[#6fda44]/40 transition"
+  >
+    <div class="flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="/socials/upwork.png" alt="upwork" class="w-12" />
+        <div>
+          <h1 class="text-xl text-dark font-bold dark:text-white">Upwork</h1>
+          <span class="text-dark/60 md:text-lg dark:text-white/60">
+            Muhdani Boyrendi E.
           </span>
         </div>
       </div>

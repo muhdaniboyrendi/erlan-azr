@@ -1,13 +1,16 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <div class="flex justify-center gap-4 mt-5 max-w-md mx-auto md:hidden dark:text-white/70">
+  <div
+    class="flex justify-center gap-4 mt-5 max-w-md mx-auto md:hidden dark:text-white/70"
+  >
     <NuxtLink
       to="/"
       class="flex items-center w-1/2 text-center bg-dark/20 p-3 rounded-full dark:bg-white/10"
     >
-      <div class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-dark/30 dark:bg-dark/50">
+      <div
+        class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-dark/30 dark:bg-dark/50"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -49,7 +52,7 @@
   <div
     class="py-6 bg-dark/20 rounded-[2rem] flex items-center mt-4 max-w-md mx-auto md:hidden dark:bg-white/10 dark:text-white/70"
   >
-    <NuxtLink class="w-1/3 flex flex-wrap justify-center mt-1">
+    <NuxtLink to="/projects" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full bg-opacity-20 bg-dark/30 dark:bg-dark/50"
       >
@@ -74,7 +77,7 @@
         >Projects</span
       >
     </NuxtLink>
-    <NuxtLink class="w-1/3 flex flex-wrap justify-center mt-1">
+    <NuxtLink to="/uses" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full bg-opacity-20 bg-dark/30 dark:bg-dark/50"
       >
@@ -93,7 +96,7 @@
       </div>
       <span
         class="w-full text-center text-xs mt-2 dark:text-text_secondary_dark"
-        >Equipments</span
+        >Uses</span
       >
     </NuxtLink>
     <NuxtLink class="w-1/3 flex flex-wrap justify-center mt-1">
