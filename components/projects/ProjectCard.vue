@@ -1,29 +1,34 @@
+<script setup>
+const props = defineProps(["project"]);
+</script>
+
 <template>
   <div
-    class="pt-1 border border-white/50 border-t-0 rounded-2xl bg-linear-to-r/oklch from-primary to-secondary overflow-hidden hover:from-secondary hover:to-primary transition duration-500 ease-out dark:border-dark/50"
+    class="pt-1 border border-white/50 border-t-0 rounded-2xl bg-linear-to-r/oklch from-primary to-secondary overflow-hidden hover:from-secondary hover:to-primary transition duration-1000 ease-out dark:border-dark/50"
   >
-    <div class="p-4 bg-white/80 dark:bg-dark/90">
+    <div class="p-4 h-full bg-white/80 dark:bg-dark/90">
       <div class="flex flex-wrap gap-y-4">
         <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
           <img
-            src="/projects/ea-invitation.png"
-            alt="project"
+            :src="project.data.image"
+            :alt="project.data.title"
             class="rounded-lg"
           />
         </div>
-        <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 sm:pl-4 md:pl-0 lg:pl-4">
-          <h3
-            class="text-xl text-dark font-semibold font-secondary mb-2 dark:text-white"
-          >
-            Project
-          </h3>
-          <p class="text-dark/80 dark:text-white/80">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi,
-            quod.
-          </p>
-          <div class="flex justify-center items-center gap-x-3 mt-4">
-            <a
-              href="#"
+        <div class="w-full flex flex-wrap content-between sm:w-1/2 md:w-full lg:w-1/2 sm:pl-4 md:pl-0 lg:pl-4">
+          <div>
+            <h3
+              class="text-xl text-dark font-semibold font-secondary mb-2 dark:text-white"
+            >
+              {{ project.data.title }}
+            </h3>
+            <p class="text-dark/80 dark:text-white/80">
+              {{ project.data.quote }}
+            </p>
+          </div>
+          <div class="w-full flex justify-center items-center gap-x-3 mt-4">
+            <NuxtLink
+              :to="`/projects/${project.slug}`"
               class="relative w-full bg-linear-to-br/oklch from-primary to-secondary p-0.5 rounded-full overflow-hidden"
             >
               <div
@@ -31,9 +36,10 @@
               >
                 View Project
               </div>
-            </a>
+            </NuxtLink>
             <a
-              href="https://ea-invitation.vercel.app/"
+              v-if="project.data.link"
+              :href="project.data.link"
               target="_blank"
               class="relative w-full bg-linear-to-br/oklch from-primary to-secondary p-0.5 rounded-full overflow-hidden"
             >

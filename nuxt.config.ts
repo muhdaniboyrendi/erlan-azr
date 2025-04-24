@@ -8,7 +8,10 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxtjs/seo", "@nuxt/icon", "@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/seo", "@nuxt/icon", "@nuxtjs/color-mode", "@pinia/nuxt"],
+  pinia: {
+    storesDirs: ["./stores/**"],
+  },
   icon: {
     mode: "css",
     cssLayer: "base",

@@ -1,17 +1,16 @@
 <template>
   <div class="w-full px-4 py-20">
     <h3
-      class="text-center text-3xl text-dark font-semibold font-secondary mb-15 dark:text-white"
+      class="text-center text-3xl text-dark font-semibold font-exo mb-15 dark:text-white"
     >
       My Latest Projects
     </h3>
     <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
-      <HomeProjectsCard />
-      <HomeProjectsCard />
-      <HomeProjectsCard />
-      <HomeProjectsCard />
+      <ProjectsProjectCard />
+      <ProjectsProjectCard />
     </div>
-    <button
+    <NuxtLink
+      to="/projects"
       class="text-lg text-white mt-15 mx-auto block p-0.5 font-semibold bg-linear-to-br/oklch from-primary to-secondary rounded-full hover:cursor-pointer group"
     >
       <div
@@ -19,6 +18,6 @@
       >
         View All Projects
       </div>
-    </button>
+    </NuxtLink>
   </div>
 </template>

@@ -4,7 +4,7 @@ const props = defineProps(["title", "icon", "items"]);
 
 <template>
   <div
-    class="bg-linear-to-b/oklch from-primary to-secondary p-0.5 rounded-2xl hover:from-secondary hover:to-primary transition duration-500 ease-out"
+    class="bg-linear-to-b/oklch from-primary to-secondary p-0.5 rounded-2xl hover:from-secondary hover:to-primary transition duration-1000 ease-out"
   >
     <div class="bg-white/80 h-full p-5 rounded-2xl dark:bg-dark/90">
       <div class="flex justify-between items-center">
