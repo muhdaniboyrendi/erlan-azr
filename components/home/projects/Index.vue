@@ -1,3 +1,9 @@
+<script setup>
+const projectStore = useProjectStore();
+
+const projects = projectStore.projects;
+</script>
+
 <template>
   <div class="w-full px-4 py-20">
     <h3
@@ -6,12 +12,15 @@
       My Latest Projects
     </h3>
     <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
-      <ProjectsProjectCard />
-      <ProjectsProjectCard />
+      <ProjectsProjectCard
+        v-for="project in projects.slice(0, 4)"
+        :key="project.slug"
+        :project="project"
+      />
     </div>
     <NuxtLink
       to="/projects"
-      class="text-lg text-white mt-15 mx-auto block p-0.5 font-semibold bg-linear-to-br/oklch from-primary to-secondary rounded-full hover:cursor-pointer group"
+      class="text-lg w-fit text-white mt-15 mx-auto block p-0.5 font-semibold bg-linear-to-br/oklch from-primary to-secondary rounded-full hover:cursor-pointer group"
     >
       <div
         class="bg-white/80 text-dark py-2 px-8 lg:py-3 lg:px-12 rounded-full group-hover:bg-transparent group-hover:text-white dark:text-white dark:bg-dark/90 transition"
