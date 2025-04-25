@@ -22,10 +22,10 @@ const hamburgerMenu = () => {
       >
         <HeaderNavBrand />
         <div class="flex md:order-2 space-x-3 md:space-x-0">
-          <div class="hidden md:flex md:space-x-2">
-            <Icon name="hugeicons:sun-03" size="23" class="text-dark/70 dark:text-white/70" />
+          <div class="hidden md:flex md:items-center md:space-x-3">
+            <i class="bi bi-sun text-lg mt-1 text-dark/70 dark:text-white/70"></i>
             <HeaderDarkModeToggle />
-            <Icon name="hugeicons:moon-02" size="23" class="text-dark/70 dark:text-white/70" />
+            <i class="bi bi-moon text-lg mt-1 text-dark/70 dark:text-white/70"></i>
           </div>
 
           <button

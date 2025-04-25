@@ -47,10 +47,7 @@
         </div>
       </div>
       <div class="w-full lg:w-1/2 px-3 flex items-center">
-        <HomeHeroPicture />
-      </div>
-      <div class="w-full px-3 pt-15">
-        <HomeHeroCtaButton />
+        <LazyHomeHeroPicture />
       </div>
     </div>
   </div>

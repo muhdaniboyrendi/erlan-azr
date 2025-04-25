@@ -1,5 +1,5 @@
 <template>
   <div>
-    <ProjectsDetails />
+    <LazyProjectsDetails />
   </div>
 </template>

@@ -27,7 +27,7 @@ export const useProjectStore = defineStore("project", {
         story:
           "I created this project for my portfolio. I developed this web myself, starting from designing the system and database, creating API, designing UI/UX, and etc.",
         stack: ["Vue.js", "Tailwind CSS", "Laravel", "MySQL"],
-        image: "/projects/ea-invitation.png",
+        image: "/projects/student-management.png",
       },
       {
         slug: "note-app",
@@ -40,7 +40,7 @@ export const useProjectStore = defineStore("project", {
         story:
           "I created this project for my portfolio. I developed this web myself, starting from designing the system and database, creating API, designing UI/UX, and etc.",
         stack: ["React.js", "Bootstrap"],
-        image: "/projects/ea-invitation.png",
+        image: "/projects/note-app.png",
       },
     ],
   }),

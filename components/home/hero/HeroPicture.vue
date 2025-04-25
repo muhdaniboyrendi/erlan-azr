@@ -1,17 +1,26 @@
 <script setup>
-const profile = "/img/profile.png";
+const blur = ref("blur-2xl");
+
+onMounted(() => {
+  blur.value = "blur-none";
+});
 </script>
 
 <template>
   <div
-    class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center mx-auto"
+    class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center mx-auto transition-all ease-out duration-1000"
+    :class="blur"
   >
     <div
       class="hexagon-shadow absolute w-60 h-60 md:w-64 md:h-64 rounded-full"
     ></div>
     <div class="hexagon relative transition-all bg-white">
       <div class="absolute flex items-center justify-center">
-        <img :src="profile" alt="My Photo" class="ml-4 -mt-12 scale-105" />
+        <img
+          src="/img/profile.png"
+          alt="My Photo"
+          class="ml-4 -mt-12 scale-105"
+        />
       </div>
     </div>
   </div>
@@ -29,6 +38,6 @@ const profile = "/img/profile.png";
 }
 
 .hexagon-shadow {
-  box-shadow: 0 0 100px 50px #A645A2;
+  box-shadow: 0 0 100px 50px #a645a2;
 }
 </style>
