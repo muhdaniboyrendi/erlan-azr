@@ -39,7 +39,7 @@
                 icon="bi bi-whatsapp"
               />
               <HomeHeroSocialLink
-                link="boyrendierlan@gmailcom"
+                link="mailto:boyrendierlan@gmailcom"
                 icon="bi bi-envelope"
               />
             </div>

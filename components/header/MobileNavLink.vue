@@ -1,12 +1,14 @@
 <script setup>
 const route = useRoute();
+
+const emit = defineEmits(['toggleNav']);
 </script>
 
 <template>
   <div
     class="flex justify-center gap-4 mt-5 max-w-md mx-auto md:hidden dark:text-white/70"
   >
-    <NuxtLink
+    <NuxtLink @click="emit('toggleNav')"
       to="/"
       class="flex items-center w-1/2 text-center bg-dark/20 p-3 rounded-full dark:bg-white/10"
     >
@@ -18,7 +20,7 @@ const route = useRoute();
       </div>
       <span class="mt-1 dark:text-text_secondary_dark text-xs">Home</span>
     </NuxtLink>
-    <NuxtLink
+    <NuxtLink @click="emit('toggleNav')"
       to="/about"
       class="flex items-center w-1/2 text-center bg-dark/20 p-3 rounded-full dark:bg-white/10"
     >
@@ -34,7 +36,7 @@ const route = useRoute();
   <div
     class="py-6 bg-dark/20 rounded-[2rem] flex items-center mt-4 max-w-md mx-auto md:hidden dark:bg-white/10 dark:text-white/70"
   >
-    <NuxtLink to="/projects" class="w-1/3 flex flex-wrap justify-center mt-1">
+    <NuxtLink @click="emit('toggleNav')" to="/projects" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full"
         :class="route.path === '/projects' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
@@ -46,7 +48,7 @@ const route = useRoute();
         >Projects</span
       >
     </NuxtLink>
-    <NuxtLink to="/uses" class="w-1/3 flex flex-wrap justify-center mt-1">
+    <NuxtLink @click="emit('toggleNav')" to="/uses" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full"
         :class="route.path === '/uses' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
@@ -58,7 +60,7 @@ const route = useRoute();
         >Uses</span
       >
     </NuxtLink>
-    <NuxtLink class="w-1/3 flex flex-wrap justify-center mt-1">
+    <NuxtLink @click="emit('toggleNav')" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full"
         :class="route.path === '/' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"

@@ -33,13 +33,26 @@ export const useProjectStore = defineStore("project", {
         slug: "note-app",
         title: "Note App",
         quote: "An website for note aplication.",
-        source: "https://github.com/muhdaniboyrendi/student-management",
-        link: "https://student-management-steel.vercel.app/",
+        source: "https://github.com/muhdaniboyrendi/personal-notes",
+        link: "https://personal-notes-tawny-five.vercel.app/",
         description:
           "This website is used for create, read, update, and delete notes.",
         story:
-          "I created this project for my portfolio. I developed this web myself, starting from designing the system and database, creating API, designing UI/UX, and etc.",
+          "I created this project for my portfolio. I made this website when I was learning to use React.js.",
         stack: ["React.js", "Bootstrap"],
+        image: "/projects/note-app.png",
+      },
+      {
+        slug: "todo-list-app",
+        title: "Todo List App",
+        quote: "An website for todo list aplication.",
+        source: null,
+        link: null,
+        description:
+          "This website is used for create, read, update, and delete todo.",
+        story:
+          "I created this project for my portfolio. I made this website when I was learning to use Vue.js.",
+        stack: ["Vue.js", "Bootstrap"],
         image: "/projects/note-app.png",
       },
     ],

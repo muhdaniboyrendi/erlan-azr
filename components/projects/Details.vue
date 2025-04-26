@@ -39,10 +39,13 @@ onUnmounted(() => {
             >
               {{ project.title }}
             </h1>
-            <p class="text-dark/80 dark:text-white/80">
+            <p class="mb-10 text-dark/80 dark:text-white/80">
               {{ project.quote }}
             </p>
-            <div class="flex gap-x-4 mt-3 mb-10">
+            <div
+              v-if="project.source || project.link"
+              class="flex gap-x-4 mb-10"
+            >
               <a
                 v-if="project.source"
                 :href="project.source"

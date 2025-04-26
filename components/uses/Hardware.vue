@@ -7,7 +7,7 @@
         class="flex flex-wrap flex-row-reverse items-center gap-y-10 bg-white/80 rounded-3xl p-8 dark:bg-dark/90"
       >
         <div class="w-full lg:w-1/2 px-10">
-          <img src="/img/hardware.png" alt="komputer hardware" class="w-full" />
+          <NuxtImg src="/img/hardware.png" alt="komputer hardware" class="w-full" />
         </div>
         <div class="w-full lg:w-1/2">
           <h2 class="text-2xl font-exo font-bold text-dark dark:text-white">

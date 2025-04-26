@@ -15,7 +15,7 @@
         </p>
       </div>
     </div>
-    <UsesSoftware />
-    <UsesHardware />
+    <LazyUsesSoftware />
+    <LazyUsesHardware />
   </div>
 </template>

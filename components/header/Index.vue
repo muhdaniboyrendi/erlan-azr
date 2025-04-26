@@ -52,7 +52,7 @@ const hamburgerMenu = () => {
           :class="hamburger"
           id="navbar-sticky"
         >
-          <HeaderMobileNavLink />
+          <HeaderMobileNavLink @toggle-nav="hamburgerMenu" />
           <ul
             class="hidden md:flex p-4 md:p-0 mt-4 font-semibold md:space-x-8 md:flex-row md:mt-0"
           >
