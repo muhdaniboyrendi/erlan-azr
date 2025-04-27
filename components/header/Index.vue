@@ -15,7 +15,7 @@ const hamburgerMenu = () => {
 <template>
   <nav class="fixed w-full z-20 top-3 flex justify-center px-3">
     <div
-      class="bg-white/50 backdrop-blur-md rounded-2xl w-full max-w-4xl dark:bg-dark/50"
+      class="bg-white/50 backdrop-blur-xl rounded-2xl w-full max-w-4xl dark:bg-dark/50"
     >
       <div
         class="w-full flex flex-wrap items-center justify-between mx-auto p-4"

@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center mx-auto transition-all ease-out duration-1000 delay-1000"
+    class="hexagon-wrapper w-72 h-72 md:w-80 md:h-80 flex justify-center items-center mx-auto transition-all ease-out duration-1000 delay-500"
     :class="blur"
   >
     <div

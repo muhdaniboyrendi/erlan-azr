@@ -12,7 +12,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxtjs/color-mode", "@pinia/nuxt", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/color-mode",
+    "@pinia/nuxt",
+    "@nuxt/image",
+    "motion-v/nuxt",
+  ],
   pinia: {
     storesDirs: ["./stores/**"],
   },
