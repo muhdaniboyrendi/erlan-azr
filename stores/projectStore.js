@@ -4,11 +4,24 @@ export const useProjectStore = defineStore("project", {
   state: () => ({
     projects: [
       {
+        slug: "b&f-photobooth",
+        title: "Bazar & Futsal Photobooth",
+        quote: "An photobooth website for Bazar and Futsal event.",
+        source: null,
+        link: "https://karanganyar-timur-1-photobooth.vercel.app/",
+        description:
+          "This website is used for taking photo with photoboot in bazar and fustal event.",
+        story:
+          "I created this project for my client who want make photobooth website in bazar and futsal event in Ganoman, Des. Koripan, Kec. Matesih, Kab. Karanganyar, Central Java.",
+        stack: ["Nuxt", "Tailwind CSS"],
+        image: "/projects/b&f-photobooth.png",
+      },
+      {
         slug: "ea-invitation",
         title: "EA Invitation",
         quote: "An official website for EA Invitation.",
         source: null,
-        link: "https://ea-invitation.vercel.app/",
+        link: "https://ea-invitation-landing.vercel.app/",
         description:
           "This website is used for ordering web-based wedding invitations.",
         story:
