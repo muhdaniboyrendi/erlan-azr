@@ -14,7 +14,7 @@ const emit = defineEmits(['toggleNav']);
     >
       <div
         class="flex justify-center items-center w-10 h-10 mr-2 rounded-full"
-        :class="route.path === '/' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
+        :class="route.path === '/' ? 'bg-cyan-500' : 'bg-dark/30 dark:bg-dark/50'"
       >
         <i class="bi bi-house-door-fill text-white text-xl"></i>
       </div>
@@ -26,7 +26,7 @@ const emit = defineEmits(['toggleNav']);
     >
       <div
         class="flex justify-center items-center w-10 h-10 mr-2 rounded-full"
-        :class="route.path === '/about' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
+        :class="route.path === '/about' ? 'bg-cyan-500' : 'bg-dark/30 dark:bg-dark/50'"
       >
         <i class="bi bi-info-circle-fill text-white text-xl"></i>
       </div>
@@ -39,7 +39,7 @@ const emit = defineEmits(['toggleNav']);
     <NuxtLink @click="emit('toggleNav')" to="/projects" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full"
-        :class="route.path === '/projects' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
+        :class="route.path === '/projects' ? 'bg-cyan-500' : 'bg-dark/30 dark:bg-dark/50'"
       >
         <i class="bi bi-clipboard-data-fill text-white text-xl"></i>
       </div>
@@ -51,7 +51,7 @@ const emit = defineEmits(['toggleNav']);
     <NuxtLink @click="emit('toggleNav')" to="/uses" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full"
-        :class="route.path === '/uses' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
+        :class="route.path === '/uses' ? 'bg-cyan-500' : 'bg-dark/30 dark:bg-dark/50'"
       >
         <i class="bi bi-tools text-white text-xl"></i>
       </div>
@@ -63,7 +63,7 @@ const emit = defineEmits(['toggleNav']);
     <NuxtLink @click="emit('toggleNav')" class="w-1/3 flex flex-wrap justify-center mt-1">
       <div
         class="flex justify-center items-center w-10 h-10 rounded-full"
-        :class="route.path === '/' ? 'bg-tertiary' : 'bg-dark/30 dark:bg-dark/50'"
+        :class="route.path === '/' ? 'bg-cyan-500' : 'bg-dark/30 dark:bg-dark/50'"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ const emit = defineEmits(['toggleNav']);
   >
     <div class="flex items-center">
       <div
-        class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-dark/30 dark:bg-tertiary"
+        class="flex justify-center items-center w-10 h-10 mr-2 rounded-full bg-dark/30 dark:bg-cyan-500"
       >
         <i class="bi bi-moon-fill text-white text-xl"></i>
       </div>
