@@ -2,9 +2,7 @@
   <NuxtLoadingIndicator />
   <div class="relative font-primary min-h-screen overflow-hidden">
     <NuxtLayout>
-      <div class="pt-23">
-        <NuxtPage />
-      </div>
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
