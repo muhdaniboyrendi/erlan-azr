@@ -12,6 +12,9 @@ useSeoMeta({
     <HomeProfile />
     <HomeSkills />
     <HomeProjects />
+    <HomeBusiness />
+    <HomeOrganization />
     <HomeUses />
+    <HomeContact />
   </div>
 </template>

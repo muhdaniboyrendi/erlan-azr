@@ -41,8 +41,7 @@
       <p
         class="text-lg md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto animate-fade-in-up animation-delay-200"
       >
-        <span class="text-cyan-400 font-semibold">Software Engineer</span> |
-        <span class="text-purple-400 font-semibold">Tech Enthusiast</span>
+        <span class="text-cyan-400 font-semibold">Software Engineer</span>
       </p>
 
       <p

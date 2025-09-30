@@ -44,6 +44,15 @@
               ></span>
             </NuxtLink>
             <NuxtLink
+              to="#skills"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              Skills
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
+            <NuxtLink
               to="#projects"
               class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
             >
@@ -53,10 +62,19 @@
               ></span>
             </NuxtLink>
             <NuxtLink
-              to="#skills"
+              to="#business"
               class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
             >
-              Skills
+              Business
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
+            <NuxtLink
+              to="#organization"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              Organization
               <span
                 class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
               ></span>
@@ -142,6 +160,13 @@
                 About
               </NuxtLink>
               <NuxtLink
+                to="#skills"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Skills
+              </NuxtLink>
+              <NuxtLink
                 to="#projects"
                 @click="closeMobileMenu"
                 class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
@@ -149,11 +174,25 @@
                 Projects
               </NuxtLink>
               <NuxtLink
-                to="#skills"
+                to="#business"
                 @click="closeMobileMenu"
                 class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
               >
-                Skills
+                Business
+              </NuxtLink>
+              <NuxtLink
+                to="#organization"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Organization
+              </NuxtLink>
+              <NuxtLink
+                to="#uses"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Uses
               </NuxtLink>
               <NuxtLink
                 to="#contact"
@@ -176,8 +215,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
 

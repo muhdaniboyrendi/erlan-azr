@@ -230,7 +230,7 @@
             <!-- Info Overlay -->
             <div class="absolute bottom-0 left-0 right-0 p-8">
               <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-900/80 backdrop-blur-xl border border-cyan-400/30 mb-4"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark/30 backdrop-blur-xl border border-cyan-400/30"
               >
                 <div class="relative flex h-3 w-3">
                   <span
@@ -244,10 +244,6 @@
                   >My Current Workspace</span
                 >
               </div>
-              <p class="text-gray-300 max-w-2xl">
-                A minimalist setup designed for maximum productivity and comfort
-                during long coding sessions.
-              </p>
             </div>
           </div>
         </div>
@@ -257,156 +253,70 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 const activeCategory = ref("Hardware");
 
-const categories = ref(["Hardware", "Software", "Accessories"]);
+const categories = ref(["Hardware", "Accessories"]);
 
 const hardwareItems = ref([
   {
-    name: 'MacBook Pro 16"',
+    name: 'Lenovo ThinkPad X1 Carbon (7th Gen)',
     category: "Laptop",
     description:
       "My primary machine for development. Powerful enough to handle any task I throw at it.",
-    specs: ["M2 Pro", "32GB RAM", "1TB SSD", "Space Gray"],
+    specs: ["Intel Core i5-10210U", "8GB RAM", "256GB SSD", "Black"],
     icon: "💻",
     year: "2024",
   },
   {
-    name: "Dell UltraSharp U2720Q",
+    name: "Xiaomi A27i",
     category: "Monitor",
     description:
-      "27-inch 4K monitor with excellent color accuracy for design and development work.",
-    specs: ['27"', "4K UHD", "IPS", "USB-C Hub"],
+      "27-inch monitor with excellent color accuracy for design and development work.",
+    specs: ['27"', "FHD", "IPS", "100Hz"],
     icon: "🖥️",
-    year: "2023",
+    year: "2025",
   },
   {
-    name: "Custom Built PC",
-    category: "Desktop",
+    name: 'Samsung Galaxy A35 5G',
+    category: "Phone",
     description:
-      "High-performance workstation for intensive tasks, rendering, and gaming.",
-    specs: ["AMD Ryzen 9", "RTX 4080", "64GB RAM", "2TB NVMe"],
-    icon: "🖲️",
-    year: "2024",
-  },
-  {
-    name: 'iPad Pro 12.9"',
-    category: "Tablet",
-    description:
-      "Perfect for sketching UI designs, note-taking, and mobile testing.",
-    specs: ["M2 Chip", "256GB", "WiFi + Cellular", "Magic Keyboard"],
+      "A powerful smartphone with a stunning display and versatile camera.",
+    specs: ["Exynos 1380", "8GB RAM", "256GB Storage", "5G"],
     icon: "📱",
-    year: "2023",
-  },
-]);
-
-const softwareItems = ref([
-  {
-    name: "VS Code",
-    description: "My go-to code editor with extensive customization",
-    category: "Editor",
-    icon: "⚡",
-  },
-  {
-    name: "Warp",
-    description: "Modern terminal with AI-powered features",
-    category: "Terminal",
-    icon: "🔲",
-  },
-  {
-    name: "Figma",
-    description: "Design tool for UI/UX and prototyping",
-    category: "Design",
-    icon: "🎨",
-  },
-  {
-    name: "Raycast",
-    description: "Productivity launcher for macOS",
-    category: "Productivity",
-    icon: "🚀",
-  },
-  {
-    name: "Notion",
-    description: "All-in-one workspace for notes and docs",
-    category: "Notes",
-    icon: "📝",
-  },
-  {
-    name: "Arc Browser",
-    description: "Next-gen browser with unique features",
-    category: "Browser",
-    icon: "🌐",
-  },
-  {
-    name: "Docker Desktop",
-    description: "Containerization platform",
-    category: "DevOps",
-    icon: "🐳",
-  },
-  {
-    name: "TablePlus",
-    description: "Modern database management tool",
-    category: "Database",
-    icon: "🗄️",
-  },
-  {
-    name: "Spotify",
-    description: "Music streaming for focus",
-    category: "Music",
-    icon: "🎵",
+    year: "2024",
   },
 ]);
 
 const accessoriesItems = ref([
   {
-    name: "Keychron K8 Pro",
-    brand: "Keychron",
-    description: "Wireless mechanical keyboard with hot-swappable switches",
+    name: "Rexus Legionare MX",
+    brand: "Rexus",
+    description: "Mechanical keyboard with hot-swappable switches",
     icon: "⌨️",
   },
   {
-    name: "Logitech MX Master 3S",
+    name: "Logitech G305",
     brand: "Logitech",
     description: "Ergonomic wireless mouse with precision scrolling",
     icon: "🖱️",
   },
   {
-    name: "Sony WH-1000XM5",
-    brand: "Sony",
-    description: "Noise-cancelling headphones for deep focus",
+    name: "Realme Buds T100",
+    brand: "Realme",
+    description: "TWS earbuds for deep focus",
     icon: "🎧",
   },
   {
-    name: "Elgato Key Light",
-    brand: "Elgato",
-    description: "Professional LED panel for video calls",
-    icon: "💡",
+    name: "Orico MPS8030",
+    brand: "Orico",
+    description: "Medium to large desk mat for mouse and keyboard",
+    icon: "🖼️",
   },
   {
-    name: "CalDigit TS4",
-    brand: "CalDigit",
-    description: "Thunderbolt 4 dock with 18 ports",
-    icon: "🔌",
-  },
-  {
-    name: "Herman Miller Aeron",
-    brand: "Herman Miller",
-    description: "Ergonomic office chair for long coding sessions",
-    icon: "🪑",
-  },
-  {
-    name: "Autonomous SmartDesk",
-    brand: "Autonomous",
-    description: "Electric standing desk with memory presets",
-    icon: "🪵",
-  },
-  {
-    name: "Nanoleaf Panels",
-    brand: "Nanoleaf",
-    description: "Smart LED light panels for ambient lighting",
-    icon: "✨",
+    name: "UNEED Laptop Stand",
+    brand: "UNEED",
+    description: "Adjustable aluminum laptop stand for better ergonomics",
+    icon: "🖥️",
   },
 ]);
 
@@ -414,9 +324,6 @@ const getCategoryIcon = (category) => {
   const icons = {
     Hardware: {
       template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
-    },
-    Software: {
-      template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
     },
     Accessories: {
       template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>`,
@@ -434,15 +341,6 @@ const getCategoryIcon = (category) => {
   width: 100%;
   height: 100%;
   animation: grid-move 20s linear infinite;
-}
-
-@keyframes grid-move {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(120px, 120px);
-  }
 }
 
 .neon-text {
