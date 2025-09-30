@@ -1,121 +1,213 @@
-<script setup>
-const isMenuOpen = ref(false);
-const isScrolled = ref(false);
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-
-onMounted(() => {
-  const handleScroll = () => {
-    isScrolled.value = window.scrollY > 10;
-  };
-  window.addEventListener("scroll", handleScroll);
-  onUnmounted(() => window.removeEventListener("scroll", handleScroll));
-});
-</script>
-
 <template>
   <nav
-    class="fixed w-full z-50 transition-all duration-300 ease-in-out"
-    :class="isScrolled ? 'top-0 px-3 pt-3' : 'top-0 px-0 pt-0'"
+    :class="[
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out',
+      isScrolled ? 'mt-4 mx-4 md:mx-8' : 'mt-0 mx-0',
+    ]"
   >
     <div
-      class="w-full transition-all duration-500 ease-in-out"
       :class="[
+        'transition-all duration-500',
         isScrolled
-          ? 'max-w-6xl mx-auto rounded-full bg-white/50 dark:bg-dark/50 backdrop-blur-2xl shadow-xl shadow-cyan-400/10'
-          : 'max-w-none rounded-none bg-transparent backdrop-blur-none shadow-none',
+          ? 'bg-gray-900/80 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-[0_8px_32px_rgba(6,182,212,0.15)]'
+          : 'bg-transparent',
       ]"
     >
-      <div
-        class="w-full flex flex-wrap items-center justify-between mx-auto transition-all duration-500"
-        :class="isScrolled ? 'p-4' : 'px-6 py-6'"
-      >
-        <HeaderNavBrand />
-
-        <div class="flex md:order-2 items-center gap-4">
-          <div
-            class="hidden md:flex items-center gap-2 rounded-full px-3 py-1.5 transition-all duration-500"
-            :class="
-              isScrolled
-                ? 'bg-dark/5 dark:bg-white/5'
-                : 'bg-dark/5 dark:bg-white/5 backdrop-blur-md'
-            "
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <NuxtLink
+            to="/"
+            class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 neon-text"
           >
-            <i
-              class="bi bi-sun text-base text-amber-500 dark:text-gray-400 transition-colors"
-            ></i>
-            <HeaderDarkModeToggle />
-            <i
-              class="bi bi-moon text-base text-gray-400 dark:text-blue-400 transition-colors"
-            ></i>
+            <NuxtImg src="/favicon.png" alt="Logo" width="40" height="40" />
+          </NuxtLink>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-8">
+            <NuxtLink
+              to="#home"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              Home
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
+            <NuxtLink
+              to="#about"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              About
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
+            <NuxtLink
+              to="#projects"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              Projects
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
+            <NuxtLink
+              to="#skills"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              Skills
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
+            <NuxtLink
+              to="#contact"
+              class="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+            >
+              Contact
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+              ></span>
+            </NuxtLink>
           </div>
 
-          <button
-            @click="toggleMenu"
-            type="button"
-            class="relative flex flex-col justify-center items-center w-10 h-10 md:hidden rounded-lg transition-all duration-300"
-            :class="
-              isScrolled
-                ? 'hover:bg-gray-100 dark:hover:bg-white/5'
-                : 'hover:bg-white/10 dark:hover:bg-white/5 backdrop-blur-md'
-            "
-            aria-label="Toggle menu"
-          >
-            <div
-              class="flex flex-col justify-center items-center w-6 h-5 relative"
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <button
+              class="group relative px-6 py-2.5 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)]"
             >
-              <span
-                class="absolute h-0.5 w-6 transform transition-all duration-300 ease-out"
-                :class="[
-                  isMenuOpen ? 'rotate-45' : '-translate-y-2',
-                  isScrolled
-                    ? 'bg-dark/90 dark:bg-gray-100'
-                    : 'bg-white dark:bg-gray-100',
-                ]"
-              ></span>
-              <span
-                class="absolute h-0.5 w-4 transform transition-all duration-300 ease-out"
-                :class="[
-                  isMenuOpen ? 'opacity-0' : 'opacity-100',
-                  isScrolled
-                    ? 'bg-dark/90 dark:bg-gray-100'
-                    : 'bg-white dark:bg-gray-100',
-                ]"
-              ></span>
-              <span
-                class="absolute h-0.5 w-6 transform transition-all duration-300 ease-out"
-                :class="[
-                  isMenuOpen ? '-rotate-45' : 'translate-y-2',
-                  isScrolled
-                    ? 'bg-dark/90 dark:bg-gray-100'
-                    : 'bg-white dark:bg-gray-100',
-                ]"
-              ></span>
-            </div>
+              <span class="relative z-10">Hire Me</span>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            @click="toggleMobileMenu"
+            class="md:hidden text-cyan-400 hover:text-cyan-300 transition-colors"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                v-if="!isMobileMenuOpen"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+              <path
+                v-else
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
         </div>
 
-        <div
-          class="w-full md:flex md:w-auto md:order-1 md:mt-0 transition-all duration-300 ease-in-out overflow-hidden md:overflow-visible"
-          :class="isMenuOpen ? 'max-h-screen mt-4' : 'max-h-0'"
-          id="navbar-sticky"
+        <!-- Mobile Menu -->
+        <Transition
+          enter-active-class="transition-all duration-300 ease-out"
+          enter-from-class="opacity-0 max-h-0"
+          enter-to-class="opacity-100 max-h-96"
+          leave-active-class="transition-all duration-300 ease-in"
+          leave-from-class="opacity-100 max-h-96"
+          leave-to-class="opacity-0 max-h-0"
         >
-          <div class="md:hidden">
-            <HeaderMobileNavLink @toggle-nav="toggleMenu" />
-          </div>
-
-          <ul
-            class="hidden md:flex p-4 md:p-0 font-semibold md:space-x-10 md:flex-row items-center"
+          <div
+            v-show="isMobileMenuOpen"
+            class="md:hidden pt-4 pb-2 border-t border-cyan-400/20 mt-4 overflow-hidden"
           >
-            <HeaderNavLink title="Home" path="/" />
-            <HeaderNavLink title="About" path="/about" />
-            <HeaderNavLink title="Projects" path="/projects" />
-            <HeaderNavLink title="Uses" path="/uses" />
-          </ul>
-        </div>
+            <div class="flex flex-col gap-4">
+              <NuxtLink
+                to="#home"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Home
+              </NuxtLink>
+              <NuxtLink
+                to="#about"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                About
+              </NuxtLink>
+              <NuxtLink
+                to="#projects"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Projects
+              </NuxtLink>
+              <NuxtLink
+                to="#skills"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Skills
+              </NuxtLink>
+              <NuxtLink
+                to="#contact"
+                @click="closeMobileMenu"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+              >
+                Contact
+              </NuxtLink>
+              <button
+                class="mt-2 px-6 py-2.5 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-sm hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300"
+              >
+                Hire Me
+              </button>
+            </div>
+          </div>
+        </Transition>
       </div>
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isScrolled = ref(false);
+const isMobileMenuOpen = ref(false);
+
+const handleScroll = () => {
+  if (window.scrollY > 50) {
+    isScrolled.value = true;
+  } else {
+    isScrolled.value = false;
+  }
+};
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>
+
+<style scoped>
+.neon-text {
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+</style>
