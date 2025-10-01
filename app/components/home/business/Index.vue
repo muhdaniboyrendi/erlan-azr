@@ -1,7 +1,7 @@
 <template>
   <section
     id="business"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-gray-950 py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">

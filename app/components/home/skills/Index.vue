@@ -1,3 +1,86 @@
+<script setup>
+const frontendSkills = ref([
+  {
+    name: "Vue.js",
+    image: "/brand/vue.png",
+  },
+  {
+    name: "Nuxt",
+    image: "/brand/nuxt.png",
+  },
+  // {
+  //   name: "TypeScript",
+  //   image: '/brand/vue.png',
+  // },
+  {
+    name: "Tailwind CSS",
+    image: "/brand/tailwind.png",
+  },
+  {
+    name: "Bootstrap",
+    image: "/brand/bootstrap.png",
+  },
+  {
+    name: "HTML",
+    image: "/brand/html.png",
+  },
+  {
+    name: "CSS",
+    image: "/brand/css.png",
+  },
+  {
+    name: "JavaScript",
+    image: "/brand/js.png",
+  },
+]);
+
+const backendSkills = ref([
+  {
+    name: "Laravel",
+    image: "/brand/laravel.png",
+  },
+  {
+    name: "Supabase",
+    image: "/brand/supabase.png",
+  },
+  {
+    name: "PHP",
+    image: "/brand/php.png",
+  },
+]);
+
+const toolsSkills = ref([
+  {
+    name: "Git",
+    image: "/brand/git.png",
+  },
+  {
+    name: "Docker",
+    image: "/brand/docker.png",
+  },
+  {
+    name: "MySQL",
+    image: "/brand/mysql.png",
+  },
+  {
+    name: "SQLite",
+    image: "/brand/sqlite.png",
+  },
+  {
+    name: "Postman",
+    image: "/brand/postman.png",
+  },
+  {
+    name: "Figma",
+    image: "/brand/figma.png",
+  },
+  {
+    name: "VS Code",
+    image: "/brand/vscode.png",
+  },
+]);
+</script>
+
 <template>
   <section
     id="skills"
@@ -155,94 +238,11 @@
   </section>
 </template>
 
-<script setup>
-const frontendSkills = ref([
-  {
-    name: "Vue.js",
-    image: "/brand/vue.png",
-  },
-  {
-    name: "Nuxt",
-    image: "/brand/nuxt.png",
-  },
-  // {
-  //   name: "TypeScript",
-  //   image: '/brand/vue.png',
-  // },
-  {
-    name: "Tailwind CSS",
-    image: "/brand/tailwind.png",
-  },
-  {
-    name: "Bootstrap",
-    image: "/brand/bootstrap.png",
-  },
-  {
-    name: "HTML",
-    image: "/brand/html.png",
-  },
-  {
-    name: "CSS",
-    image: "/brand/css.png",
-  },
-  {
-    name: "JavaScript",
-    image: "/brand/js.png",
-  },
-]);
-
-const backendSkills = ref([
-  {
-    name: "Laravel",
-    image: "/brand/laravel.png",
-  },
-  {
-    name: "Supabase",
-    image: "/brand/supabase.png",
-  },
-  {
-    name: "PHP",
-    image: "/brand/php.png",
-  },
-]);
-
-const toolsSkills = ref([
-  {
-    name: "Git",
-    image: "/brand/git.png",
-  },
-  {
-    name: "Docker",
-    image: "/brand/docker.png",
-  },
-  {
-    name: "MySQL",
-    image: "/brand/mysql.png",
-  },
-  {
-    name: "SQLite",
-    image: "/brand/sqlite.png",
-  },
-  {
-    name: "Postman",
-    image: "/brand/postman.png",
-  },
-  {
-    name: "Figma",
-    image: "/brand/figma.png",
-  },
-  {
-    name: "VS Code",
-    image: "/brand/vscode.png",
-  },
-]);
-</script>
-
 <style scoped>
 .grid-pattern {
   background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 100px 100px;
+  background-size: 120px 120px;
   width: 100%;
   height: 100%;
   animation: grid-move 20s linear infinite;
@@ -251,5 +251,26 @@ const toolsSkills = ref([
 .neon-text {
   text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3),
     0 0 30px rgba(6, 182, 212, 0.2);
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
 </style>

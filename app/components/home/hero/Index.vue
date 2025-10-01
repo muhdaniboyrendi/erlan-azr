@@ -224,20 +224,4 @@
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
 }
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.2;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.5);
-  }
-}
-
-.animate-twinkle {
-  animation: twinkle 3s ease-in-out infinite;
-}
 </style>

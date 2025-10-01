@@ -4,7 +4,7 @@ const emit = defineEmits(["open"]);
 
 <template>
   <section
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-gray-950"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950"
   >
     <!-- Grid Background -->
     <div class="absolute inset-0 opacity-20">
@@ -50,9 +50,9 @@ const emit = defineEmits(["open"]);
           :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 1, delay: 0.5 }"
         >
-          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          <h1 class="text-5xl md:text-7xl max-w-3xl font-bold mb-6">
             <span
-              class="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text"
+              class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
             >
               Muhdani Boyrendi Erlan Azhari
             </span>
@@ -69,23 +69,11 @@ const emit = defineEmits(["open"]);
         </motion>
       </div>
 
-      <!-- Description -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 1, delay: 1.5 }"
-      >
-        <p class="text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Crafting innovative solutions with modern technologies. Explore my
-          work, skills, and creative projects in software development.
-        </p>
-      </motion>
-
       <!-- Enter Button -->
       <motion
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 1, delay: 2 }"
+        :transition="{ duration: 1, delay: 1.5 }"
       >
         <button
           @click="emit('open')"

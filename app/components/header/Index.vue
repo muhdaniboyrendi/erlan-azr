@@ -92,14 +92,17 @@
 
           <!-- CTA Button -->
           <div class="hidden md:block">
-            <button
+            <NuxtLink
+              to="#contact"
               class="group relative px-6 py-2.5 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)]"
             >
-              <span class="relative z-10">Hire Me</span>
+              <span class="relative z-10"
+                ><i class="bi bi-arrow-down"></i
+              ></span>
               <div
-                class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
-            </button>
+            </NuxtLink>
           </div>
 
           <!-- Mobile Menu Button -->
@@ -142,70 +145,65 @@
         >
           <div
             v-show="isMobileMenuOpen"
-            class="md:hidden pt-4 pb-2 border-t border-cyan-400/20 mt-4 overflow-hidden"
+            class="md:hidden pt-4 border-t border-cyan-400/20 mt-4 overflow-hidden"
           >
             <div class="flex flex-col gap-4">
               <NuxtLink
                 to="#home"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Home
               </NuxtLink>
               <NuxtLink
                 to="#about"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 About
               </NuxtLink>
               <NuxtLink
                 to="#skills"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Skills
               </NuxtLink>
               <NuxtLink
                 to="#projects"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Projects
               </NuxtLink>
               <NuxtLink
                 to="#business"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Business
               </NuxtLink>
               <NuxtLink
                 to="#organization"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Organization
               </NuxtLink>
               <NuxtLink
                 to="#uses"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Uses
               </NuxtLink>
               <NuxtLink
                 to="#contact"
                 @click="closeMobileMenu"
-                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
               >
                 Contact
               </NuxtLink>
-              <button
-                class="mt-2 px-6 py-2.5 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-sm hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300"
-              >
-                Hire Me
-              </button>
             </div>
           </div>
         </Transition>

@@ -37,7 +37,7 @@ const featuredOrg = ref({
 <template>
   <section
     id="organizations"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-950 to-gray-900 py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -241,7 +241,7 @@ const featuredOrg = ref({
 .grid-pattern {
   background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 120px 120px;
+  background-size: 60px 60px;
   width: 100%;
   height: 100%;
   animation: grid-move 20s linear infinite;

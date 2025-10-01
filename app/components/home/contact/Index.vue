@@ -1,7 +1,116 @@
+<script setup>
+const socialLinks = ref([
+  {
+    name: "Instagram",
+    handle: "@erlan.azr_",
+    url: "https://instagram.com/erlan.azr_",
+    icon: "bi-instagram",
+    iconBg: "bg-gradient-to-br from-purple-400/20 to-pink-400/20",
+    iconColor: "text-pink-400 group-hover:text-white",
+    borderColor:
+      "border-pink-400/20 hover:border-pink-400/50 hover:shadow-[0_0_40px_rgba(244,114,182,0.3)]",
+    gradientBg: "bg-gradient-to-br from-purple-400/5 to-pink-400/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "LinkedIn",
+    handle: "muhdani boyrendi",
+    url: "https://linkedin.com/in/muhdani-boyrendi",
+    icon: "bi-linkedin",
+    iconBg: "bg-gradient-to-br from-blue-400/20 to-cyan-400/20",
+    iconColor: "text-blue-400 group-hover:text-white",
+    borderColor:
+      "border-blue-400/20 hover:border-blue-400/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]",
+    gradientBg: "bg-gradient-to-br from-blue-400/5 to-cyan-400/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "GitHub",
+    handle: "@muhdaniboyrendi",
+    url: "https://github.com/muhdaniboyrendi",
+    icon: "bi-github",
+    iconBg: "bg-gradient-to-br from-gray-400/20 to-gray-600/20",
+    iconColor: "text-gray-300 group-hover:text-white",
+    borderColor:
+      "border-gray-400/20 hover:border-gray-400/50 hover:shadow-[0_0_40px_rgba(156,163,175,0.3)]",
+    gradientBg: "bg-gradient-to-br from-gray-400/5 to-gray-600/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-300 group-hover:to-gray-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "Twitter / X",
+    handle: "@yourusername",
+    url: "https://twitter.com/yourusername",
+    icon: "bi-twitter-x",
+    iconBg: "bg-gradient-to-br from-gray-700/20 to-gray-900/20",
+    iconColor: "text-gray-200 group-hover:text-white",
+    borderColor:
+      "border-gray-400/20 hover:border-gray-400/50 hover:shadow-[0_0_40px_rgba(156,163,175,0.3)]",
+    gradientBg: "bg-gradient-to-br from-gray-700/5 to-gray-900/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-200 group-hover:to-gray-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "WhatsApp",
+    handle: "+62 822-2063-3024",
+    url: "https://wa.me/6282220633024",
+    icon: "bi-whatsapp",
+    iconBg: "bg-gradient-to-br from-green-400/20 to-emerald-400/20",
+    iconColor: "text-green-400 group-hover:text-white",
+    borderColor:
+      "border-green-400/20 hover:border-green-400/50 hover:shadow-[0_0_40px_rgba(34,197,94,0.3)]",
+    gradientBg: "bg-gradient-to-br from-green-400/5 to-emerald-400/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-emerald-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "Email",
+    handle: "erlanazrdev@gmail.com",
+    url: "mailto:erlanazrdev@gmail.com",
+    icon: "bi-envelope",
+    iconBg: "bg-gradient-to-br from-cyan-400/20 to-blue-400/20",
+    iconColor: "text-cyan-400 group-hover:text-white",
+    borderColor:
+      "border-cyan-400/20 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.3)]",
+    gradientBg: "bg-gradient-to-br from-cyan-400/5 to-blue-400/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "Discord",
+    handle: "Erlan Azr",
+    url: "https://discord.gg/MfzpYpBV",
+    icon: "bi-discord",
+    iconBg: "bg-gradient-to-br from-indigo-400/20 to-purple-400/20",
+    iconColor: "text-indigo-400 group-hover:text-white",
+    borderColor:
+      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
+    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
+  },
+  {
+    name: "Tik Tok",
+    handle: "@erlan.azr",
+    url: "https://www.tiktok.com/@erlan.azr",
+    icon: "bi-tiktok",
+    iconBg: "bg-gradient-to-br from-cyan-300/20 to-pink-400/20",
+    iconColor: "text-gray-200 group-hover:text-white",
+    borderColor:
+      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
+    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
+    titleHover:
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
+  },
+]);
+</script>
+
 <template>
   <section
     id="contact"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-950 to-gray-900 py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -121,132 +230,14 @@
   </section>
 </template>
 
-<script setup>
-const socialLinks = ref([
-  {
-    name: "Instagram",
-    handle: "@erlan.azr_",
-    url: "https://instagram.com/erlan.azr_",
-    icon: "bi-instagram",
-    iconBg: "bg-gradient-to-br from-purple-400/20 to-pink-400/20",
-    iconColor: "text-pink-400 group-hover:text-white",
-    borderColor:
-      "border-pink-400/20 hover:border-pink-400/50 hover:shadow-[0_0_40px_rgba(244,114,182,0.3)]",
-    gradientBg: "bg-gradient-to-br from-purple-400/5 to-pink-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "LinkedIn",
-    handle: "muhdani boyrendi",
-    url: "https://linkedin.com/in/muhdani-boyrendi",
-    icon: "bi-linkedin",
-    iconBg: "bg-gradient-to-br from-blue-400/20 to-cyan-400/20",
-    iconColor: "text-blue-400 group-hover:text-white",
-    borderColor:
-      "border-blue-400/20 hover:border-blue-400/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]",
-    gradientBg: "bg-gradient-to-br from-blue-400/5 to-cyan-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "GitHub",
-    handle: "@muhdaniboyrendi",
-    url: "https://github.com/muhdaniboyrendi",
-    icon: "bi-github",
-    iconBg: "bg-gradient-to-br from-gray-400/20 to-gray-600/20",
-    iconColor: "text-gray-300 group-hover:text-white",
-    borderColor:
-      "border-gray-400/20 hover:border-gray-400/50 hover:shadow-[0_0_40px_rgba(156,163,175,0.3)]",
-    gradientBg: "bg-gradient-to-br from-gray-400/5 to-gray-600/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-300 group-hover:to-gray-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "Twitter / X",
-    handle: "@yourusername",
-    url: "https://twitter.com/yourusername",
-    icon: "bi-twitter-x",
-    iconBg: "bg-gradient-to-br from-gray-700/20 to-gray-900/20",
-    iconColor: "text-gray-200 group-hover:text-white",
-    borderColor:
-      "border-gray-400/20 hover:border-gray-400/50 hover:shadow-[0_0_40px_rgba(156,163,175,0.3)]",
-    gradientBg: "bg-gradient-to-br from-gray-700/5 to-gray-900/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-200 group-hover:to-gray-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "WhatsApp",
-    handle: "+62 822-2063-3024",
-    url: "https://wa.me/6282220633024",
-    icon: "bi-whatsapp",
-    iconBg: "bg-gradient-to-br from-green-400/20 to-emerald-400/20",
-    iconColor: "text-green-400 group-hover:text-white",
-    borderColor:
-      "border-green-400/20 hover:border-green-400/50 hover:shadow-[0_0_40px_rgba(34,197,94,0.3)]",
-    gradientBg: "bg-gradient-to-br from-green-400/5 to-emerald-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-emerald-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "Email",
-    handle: "erlanazrdev@gmail.com",
-    url: "mailto:erlanazrdev@gmail.com",
-    icon: "bi-envelope",
-    iconBg: "bg-gradient-to-br from-cyan-400/20 to-blue-400/20",
-    iconColor: "text-cyan-400 group-hover:text-white",
-    borderColor:
-      "border-cyan-400/20 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.3)]",
-    gradientBg: "bg-gradient-to-br from-cyan-400/5 to-blue-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "Discord",
-    handle: "Erlan Azr",
-    url: "https://discord.gg/MfzpYpBV",
-    icon: "bi-discord",
-    iconBg: "bg-gradient-to-br from-indigo-400/20 to-purple-400/20",
-    iconColor: "text-indigo-400 group-hover:text-white",
-    borderColor:
-      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
-    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
-  },
-  {
-    name: "Tik Tok",
-    handle: "@erlan.azr",
-    url: "https://www.tiktok.com/@erlan.azr",
-    icon: "bi-tiktok",
-    iconBg: "bg-gradient-to-br from-cyan-300/20 to-pink-400/20",
-    iconColor: "text-gray-200 group-hover:text-white",
-    borderColor:
-      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
-    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
-  },
-]);
-</script>
-
 <style scoped>
 .grid-pattern {
   background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 120px 120px;
+  background-size: 60px 60px;
   width: 100%;
   height: 100%;
   animation: grid-move 20s linear infinite;
-}
-
-@keyframes grid-move {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(120px, 120px);
-  }
 }
 
 .neon-text {

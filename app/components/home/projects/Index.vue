@@ -23,6 +23,16 @@ const projects = ref([
     githubUrl: "https://github.com/muhdaniboyrendi/ea-invitation-landing",
     year: "2025",
   },
+  {
+    title: "Note App",
+    description: "A website that I created for practice React.js.",
+    image: "/projects/note-app.png",
+    tags: ["Web App"],
+    techStack: ["React.js", "Tailwind CSS"],
+    liveUrl: "https://personal-notes-tawny-five.vercel.app/",
+    githubUrl: "https://github.com/muhdaniboyrendi/personal-notes",
+    year: "2024",
+  },
 ]);
 </script>
 
@@ -210,7 +220,7 @@ const projects = ref([
       transparent 1px
     ),
     linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-size: 60px 60px;
   width: 100%;
   height: 100%;
   animation: grid-move 20s linear infinite;
@@ -219,5 +229,26 @@ const projects = ref([
 .neon-text {
   text-shadow: 0 0 10px rgba(168, 85, 247, 0.5),
     0 0 20px rgba(168, 85, 247, 0.3), 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
 </style>
