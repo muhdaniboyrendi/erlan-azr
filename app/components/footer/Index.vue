@@ -93,70 +93,70 @@
           </h4>
           <ul class="space-y-3">
             <li>
-              <a
-                href="#home"
+              <NuxtLink
+                to="#home"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
                 Home
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="#about"
+              <NuxtLink
+                to="#about"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
                 About Me
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="#skills"
+              <NuxtLink
+                to="#skills"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
                 Skills
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="#projects"
+              <NuxtLink
+                to="#projects"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
                 Projects
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="#uses"
+              <NuxtLink
+                to="#uses"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
                 Uses
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="#contact"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
-                Blog
-              </a>
+                Contact
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -175,7 +175,7 @@
             <li class="flex items-start gap-3 text-gray-400">
               <i class="bi bi-geo-alt text-cyan-400"></i>
               <a
-                href="mhttps://maps.app.goo.gl/TDtxVZUfsEJP9AXt9"
+                href="https://maps.app.goo.gl/TDtxVZUfsEJP9AXt9"
                 target="_blank"
                 class="text-sm hover:text-cyan-400 transition-colors duration-300"
               >

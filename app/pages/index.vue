@@ -1,20 +1,24 @@
 <script setup>
-useSeoMeta({
-  title: "Muhdani Boyrendi Erlan Azhari",
-  description:
-    "Personal Website of Muhdani Boyrendi Erlan Azhari | Web Developer",
-});
+const pageOpen = ref(false);
+
+const handleOpenPage = () => {
+  pageOpen.value = true;
+};
 </script>
 
 <template>
-  <div>
-    <HomeHero />
-    <HomeProfile />
-    <HomeSkills />
-    <HomeProjects />
-    <HomeBusiness />
-    <HomeOrganization />
-    <HomeUses />
-    <HomeContact />
+  <Welcome v-if="!pageOpen" @open="handleOpenPage" />
+
+  <div v-else>
+    <LazyHeader />
+    <LazyHomeHero />
+    <LazyHomeProfile />
+    <LazyHomeSkills />
+    <LazyHomeProjects />
+    <LazyHomeBusiness />
+    <LazyHomeOrganization />
+    <LazyHomeUses />
+    <LazyHomeContact />
+    <LazyFooter />
   </div>
 </template>
