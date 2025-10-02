@@ -1,3 +1,29 @@
+<script setup>
+const titles = [
+  "Software Engineer",
+  "Web Developer",
+  "Tech Enthusiast",
+  "Photography Enthusiast",
+];
+
+const currentTitle = ref(titles[0]);
+let currentIndex = 0;
+let intervalId = null;
+
+onMounted(() => {
+  intervalId = setInterval(() => {
+    currentIndex = (currentIndex + 1) % titles.length;
+    currentTitle.value = titles[currentIndex];
+  }, 3000);
+});
+
+onUnmounted(() => {
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+});
+</script>
+
 <template>
   <section
     id="home"
@@ -58,7 +84,7 @@
         </h1>
       </motion>
 
-      <!-- Subheading -->
+      <!-- Subheading with Rotating Text -->
       <motion
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
@@ -67,7 +93,11 @@
         <p
           class="text-lg md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto animate-fade-in-up animation-delay-200"
         >
-          <span class="text-cyan-400 font-semibold">Software Engineer</span>
+          <span class="text-cyan-400 font-semibold">
+            <Transition name="fade" mode="out-in">
+              <span :key="currentTitle">{{ currentTitle }}</span>
+            </Transition>
+          </span>
         </p>
       </motion>
 
@@ -95,11 +125,11 @@
         >
           <NuxtLink
             to="#projects"
-            class="group relative px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+            class="group relative px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
           >
             <span class="relative z-10">View My Projects</span>
             <div
-              class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             ></div>
           </NuxtLink>
         </motion>
@@ -111,7 +141,7 @@
         >
           <NuxtLink
             to="#contact"
-            class="group px-8 py-4 border-2 border-cyan-400/50 rounded-lg font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-400/10 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+            class="group px-8 py-4 border-2 border-cyan-400/50 rounded-lg font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-400/10 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95"
           >
             Get In Touch
             <span
@@ -223,5 +253,16 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Fade Transition for Rotating Text */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

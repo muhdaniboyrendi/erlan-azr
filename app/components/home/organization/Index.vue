@@ -9,25 +9,23 @@ const featuredOrg = ref({
   projects: "50+",
   events: "100+",
   gradientClass: "from-blue-500 to-cyan-500",
-  image:
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
-  websiteUrl: "https://gdg.community",
-  joinUrl: "https://gdg.community/join",
+  image: "/img/it-team.jpg",
+  websiteUrl: "https://links.erlanazhari.my.id",
   achievements: [
-    "Organized 100+ tech events and workshops",
-    "Mentored 500+ developers in their career journey",
-    "Led 10 major hackathons with $50k+ prizes",
-    "Built active community of 5,000+ members",
+    // "Organized 100+ tech events and workshops",
+    // "Mentored 500+ developers in their career journey",
+    // "Led 10 major hackathons with $50k+ prizes",
+    // "Built active community of 5,000+ members",
   ],
   socials: [
     {
       name: "Instagram",
-      url: "https://instagram.com/gdg",
+      url: "https://instagram.com/ppgkratim1",
       icon: "bi-instagram",
     },
     {
       name: "YouTube",
-      url: "https://youtube.com/gdg",
+      url: "#",
       icon: "bi-youtube",
     },
   ],
@@ -112,7 +110,7 @@ const featuredOrg = ref({
 
             <!-- Content Container -->
             <div
-              class="relative bg-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-cyan-400/30"
+              class="relative bg-dark/60 rounded-3xl overflow-hidden border border-cyan-400/30"
             >
               <div class="grid md:grid-cols-2 gap-0">
                 <!-- Left: Content -->
@@ -170,7 +168,7 @@ const featuredOrg = ref({
                     <a
                       :href="featuredOrg.websiteUrl"
                       target="_blank"
-                      class="group/btn relative px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+                      class="group/btn relative px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] active:scale-95"
                     >
                       <span class="relative z-10 flex items-center gap-2">
                         Visit Website
@@ -195,27 +193,16 @@ const featuredOrg = ref({
 
                 <!-- Right: Image/Visual -->
                 <div class="relative h-96 md:h-auto overflow-hidden">
-                  <div
-                    class="absolute inset-0 bg-gradient-to-br"
-                    :class="featuredOrg.gradientClass"
-                  ></div>
-
                   <NuxtImg
                     :src="featuredOrg.image"
                     alt="Featured Organization"
-                    class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 transition-transform duration-700 group-hover:scale-110"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
                   <!-- Achievements Overlay -->
                   <div
-                    class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-900 to-transparent"
+                    class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-dark/80 to-transparent"
                   >
-                    <h4
-                      class="text-white font-semibold mb-3 flex items-center gap-2"
-                    >
-                      <i class="bi bi-star-fill text-yellow-400"></i>
-                      Key Achievements
-                    </h4>
                     <ul class="space-y-2">
                       <li
                         v-for="(achievement, idx) in featuredOrg.achievements"

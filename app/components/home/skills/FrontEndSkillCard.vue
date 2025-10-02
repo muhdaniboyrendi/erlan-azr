@@ -14,17 +14,21 @@ const props = defineProps({
     :transition="{ duration: 0.5, delay: 0.3 }"
   >
     <div
-      class="group relative overflow-hidden p-6 rounded-xl border border-cyan-400/20 bg-gray-800/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] cursor-pointer"
+      class="group relative overflow-hidden rounded-xl bg-dark transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] cursor-pointer"
     >
-      <NuxtImg
-        :src="skill.image"
-        :alt="skill.name"
-        width="50"
-        height="50"
-        class="mx-auto"
-      />
-      <div class="text-white font-semibold text-sm text-center mt-4">
-        {{ skill.name }}
+      <div
+        class="p-6 bg-cyan-400/5 border border-cyan-400/20 hover:border-cyan-400/50 rounded-xl"
+      >
+        <NuxtImg
+          :src="skill.image"
+          :alt="skill.name"
+          width="50"
+          height="50"
+          class="mx-auto"
+        />
+        <div class="text-white font-semibold text-sm text-center mt-4">
+          {{ skill.name }}
+        </div>
       </div>
     </div>
   </motion>

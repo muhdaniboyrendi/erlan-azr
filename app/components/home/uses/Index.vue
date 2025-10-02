@@ -164,9 +164,9 @@ const accessoriesItems = ref([
           :key="index"
         >
           <div
-            class="group relative p-6 rounded-2xl bg-gray-800/30 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]"
+            class="group relative rounded-2xl bg-dark border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(6,182,212,0.2)] overflow-hidden"
           >
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 bg-cyan-400/5 p-6">
               <div class="flex gap-6">
                 <!-- Icon/Image -->
                 <div
@@ -265,25 +265,27 @@ const accessoriesItems = ref([
           :key="index"
         >
           <div
-            class="group relative p-6 rounded-2xl bg-gray-800/30 backdrop-blur-sm border border-pink-400/20 hover:border-pink-400/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(244,114,182,0.2)]"
+            class="group relative rounded-2xl bg-dark border border-purple-400/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(244,114,182,0.2)] overflow-hidden"
           >
-            <!-- Icon -->
-            <div
-              class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-pink-400/20 to-cyan-400/20 border border-pink-400/30 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300"
-            >
-              {{ item.icon }}
+            <div class="bg-purple-400/5 p-6">
+              <!-- Icon -->
+              <div
+                class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-purple-400/20 to-cyan-400/20 border border-purple-400/30 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300"
+              >
+                {{ item.icon }}
+              </div>
+
+              <!-- Content -->
+              <h3
+                class="text-base font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
+              >
+                {{ item.name }}
+              </h3>
+
+              <p class="text-gray-400 text-xs mb-2">{{ item.brand }}</p>
+
+              <p class="text-gray-500 text-xs">{{ item.description }}</p>
             </div>
-
-            <!-- Content -->
-            <h3
-              class="text-base font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
-            >
-              {{ item.name }}
-            </h3>
-
-            <p class="text-gray-400 text-xs mb-2">{{ item.brand }}</p>
-
-            <p class="text-gray-500 text-xs">{{ item.description }}</p>
           </div>
         </motion>
       </div>

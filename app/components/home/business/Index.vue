@@ -74,7 +74,7 @@
 
             <!-- Content Container -->
             <div
-              class="relative bg-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-purple-400/30"
+              class="relative bg-dark/60 rounded-3xl overflow-hidden border border-purple-400/30"
             >
               <div class="grid md:grid-cols-2 gap-0">
                 <!-- Left: Image -->
@@ -97,7 +97,7 @@
                 </div>
 
                 <!-- Right: Content -->
-                <div class="p-8 md:p-12 flex flex-col justify-center">
+                <div class="p-6 md:p-8 flex flex-col justify-center">
                   <!-- Category -->
                   <div class="flex items-center gap-2 mb-4">
                     <span
@@ -159,7 +159,7 @@
                     <a
                       href="https://ea-invitation-landing.vercel.app/"
                       target="_blank"
-                      class="group/btn relative px-6 py-3 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]"
+                      class="group/btn relative px-6 py-3 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
                     >
                       <span class="relative z-10 flex items-center gap-2">
                         Visit Website
@@ -187,27 +187,31 @@
       >
         <div class="text-center mt-16">
           <div
-            class="relative inline-block p-8 rounded-2xl bg-gradient-to-r from-purple-400/10 via-pink-400/10 to-cyan-400/10 backdrop-blur-sm border border-purple-400/30"
+            class="relative inline-block rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 overflow-hidden"
           >
-            <h3
-              class="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
+            <div
+              class="w-full h-full p-6 md:p-8 inline-block bg-dark/90 rounded-2xl border border-purple-400/30"
             >
-              Interested in Collaboration?
-            </h3>
-            <p class="text-gray-400 mb-6 max-w-xl mx-auto">
-              I'm always open to discussing new business opportunities,
-              partnerships, or investment possibilities
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-              <NuxtLink
-                to="#contact"
-                class="group relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]"
+              <h3
+                class="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
               >
-                <span class="relative z-10">Get in Touch</span>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                ></div>
-              </NuxtLink>
+                Interested in Collaboration?
+              </h3>
+              <p class="text-gray-400 mb-6 max-w-xl mx-auto">
+                I'm always open to discussing new business opportunities,
+                partnerships, or investment possibilities
+              </p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <NuxtLink
+                  to="#contact"
+                  class="group relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
+                >
+                  <span class="relative z-10">Get in Touch</span>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                </NuxtLink>
+              </div>
             </div>
           </div>
         </div>

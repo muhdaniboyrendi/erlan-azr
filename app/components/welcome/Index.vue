@@ -78,7 +78,7 @@ const emit = defineEmits(["open"]);
         <button
           @click="emit('open')"
           type="button"
-          class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)]"
+          class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] active:scale-95"
         >
           <span class="relative z-10">Start Explore</span>
           <i

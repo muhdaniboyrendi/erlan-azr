@@ -184,7 +184,7 @@ const socialLinks = ref([
             :key="index"
             :href="social.url"
             target="_blank"
-            class="group relative p-6 rounded-2xl bg-gray-800/30 backdrop-blur-sm border transition-all duration-500 hover:scale-105"
+            class="group relative rounded-2xl bg-dark border transition-all duration-500 hover:scale-105 overflow-hidden"
             :class="social.borderColor"
             :style="{ animationDelay: `${index * 0.1}s` }"
           >
@@ -195,7 +195,10 @@ const socialLinks = ref([
             ></div>
 
             <!-- Content -->
-            <div class="relative z-10 flex items-center gap-4">
+            <div
+              class="relative z-10 flex items-center gap-4 p-6"
+              :class="social.gradientBg"
+            >
               <!-- Icon -->
               <div
                 class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
