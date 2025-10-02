@@ -13,12 +13,16 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/image",
     "motion-v/nuxt",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
   app: {
     head: {
       htmlAttrs: {
         lang: "en",
       },
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
       title: "Muhdani Boyrendi Erlan Azhari",
       meta: [
         { charset: "utf-8" },
@@ -79,7 +83,7 @@ export default defineNuxtConfig({
         { name: "robots", content: "index, follow" },
         {
           name: "keywords",
-          content: "full stack developer, web developer, portfolio",
+          content: "full stack developer, web developer, portfolio, freelancer",
         },
       ],
       link: [
@@ -100,49 +104,37 @@ export default defineNuxtConfig({
           sizes: "180x180",
           href: "/apple-touch-icon.png",
         },
-        { rel: "manifest", href: "/site.webmanifest" },
         { rel: "canonical", href: "https://erlanazhari.my.id" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
-      ],
-      script: [
-        // Structured Data (JSON-LD) untuk SEO
         {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Muhdani Boyrendi Erlan Azhari",
-            alternateName: "Erlan Azhari",
-            jobTitle: "Full Stack Developer",
-            description:
-              "Full Stack Developer specializing in modern web technologies",
-            url: "https://erlanazhari.my.id",
-            image: "https://erlanazhari.my.id/og-image.png",
-            sameAs: [
-              "https://instagram.com/erlan.azr_",
-              "https://github.com/muhdaniboyrendi",
-              "https://www.linkedin.com/in/muhdani-boyrendi/",
-            ],
-          }),
+          rel: "preload",
+          as: "style",
+          href: "https://fonts.googleapis.com/css2?family=Cantata+One&family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap",
         },
       ],
-      nitro: {
-        compressPublicAssets: true,
-        prerender: {
-          crawlLinks: true,
-          routes: ["/"],
-        },
-      },
-      build: {
-        transpile: [],
-      },
-      router: {
-        options: {
-          strict: false,
-        },
-      },
     },
+  },
+  ssr: true,
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/sitemap.xml", "/robots.txt"],
+    },
+  },
+  sitemap: {
+    hostname: "https://erlanazhari.my.id",
+    gzip: true,
+    exclude: ["/admin/**", "/private/**"],
+  },
+  robots: {
+    UserAgent: "*",
+    Disallow: ["/admin", "/private"],
+    Sitemap: "https://erlanazhari.my.id/sitemap.xml",
+  },
+  experimental: {
+    payloadExtraction: false,
+    renderJsonPayloads: true,
   },
   pinia: {
     storesDirs: ["./stores/**"],

@@ -40,7 +40,7 @@ onUnmounted(() => {
           'w-fit h-fit flex transition-all duration-500 p-2 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)]',
           isScrolled
             ? 'rounded-2xl border justify-between'
-            : 'rounded-2xl rounded-tl-none border-b border-l border-r',
+            : 'rounded-2xl rounded-tl-none border-b border-r',
         ]"
       >
         <NuxtLink to="/">
@@ -52,7 +52,7 @@ onUnmounted(() => {
           'w-full md:w-fit flex flex-wrap transition-all duration-500 p-4 md:py-6 md:px-12 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)]',
           isScrolled
             ? 'rounded-2xl border'
-            : 'rounded-2xl rounded-tr-none border-b border-l border-r',
+            : 'rounded-2xl rounded-tr-none border-b border-l',
         ]"
       >
         <!-- Desktop Menu -->
@@ -107,6 +107,15 @@ onUnmounted(() => {
             class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
           >
             Organizations
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
+            ></span>
+          </NuxtLink>
+          <NuxtLink
+            to="#uses"
+            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
+          >
+            Uses
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
             ></span>

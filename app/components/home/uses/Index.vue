@@ -311,7 +311,7 @@ const accessoriesItems = ref([
                 class="aspect-video flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900"
               >
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=1200&h=675&fit=crop"
+                  src="/img/setup.jpg"
                   alt="Workspace Setup"
                   class="w-full h-full object-cover"
                 />

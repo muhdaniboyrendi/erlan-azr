@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.10.0",
+    "@nuxtjs/robots": "^5.5.5",
+    "@nuxtjs/sitemap": "^7.4.7",
     "@pinia/nuxt": "^0.11.0",
     "@tailwindcss/vite": "^4.1.4",
     "@vueuse/core": "^13.1.0",

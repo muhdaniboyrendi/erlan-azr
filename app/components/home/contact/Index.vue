@@ -40,9 +40,9 @@ const socialLinks = ref([
       "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-300 group-hover:to-gray-400 group-hover:bg-clip-text",
   },
   {
-    name: "Twitter / X",
-    handle: "@yourusername",
-    url: "https://twitter.com/yourusername",
+    name: "X",
+    handle: "@ErlanAzr",
+    url: "https://x.com/ErlanAzr?t=A6O-3yXrCGXNbg363rKJpA&s=08",
     icon: "bi-twitter-x",
     iconBg: "bg-gradient-to-br from-gray-700/20 to-gray-900/20",
     iconColor: "text-gray-200 group-hover:text-white",

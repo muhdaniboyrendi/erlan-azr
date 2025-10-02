@@ -116,17 +116,6 @@
             </li>
             <li>
               <NuxtLink
-                to="#skills"
-                class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
-              >
-                <span
-                  class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                ></span>
-                Skills
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink
                 to="#projects"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
@@ -138,13 +127,13 @@
             </li>
             <li>
               <NuxtLink
-                to="#uses"
+                to="#business"
                 class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group"
               >
                 <span
                   class="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></span>
-                Uses
+                Business
               </NuxtLink>
             </li>
             <li>
@@ -249,7 +238,7 @@ const currentYear = computed(() => new Date().getFullYear());
 .grid-pattern {
   background-image: linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px);
-  background-size: 80px 80px;
+  background-size: 120px 120px;
   width: 100%;
   height: 100%;
   animation: grid-move 30s linear infinite;
