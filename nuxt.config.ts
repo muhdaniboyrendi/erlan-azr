@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css", "~/assets/css/bootstrap-icons-override.css"],
+  css: ["~/assets/css/main.css", "bootstrap-icons/font/bootstrap-icons.css"],
   vite: {
     plugins: [tailwindcss()],
   },
@@ -104,7 +104,6 @@ export default defineNuxtConfig({
           sizes: "180x180",
           href: "/apple-touch-icon.png",
         },
-        { rel: "canonical", href: "https://erlanazhari.my.id" },
         {
           rel: "preconnect",
           href: "https://fonts.googleapis.com",
