@@ -313,6 +313,9 @@ const accessoriesItems = ref([
                 <NuxtImg
                   src="/img/setup.jpg"
                   alt="Workspace Setup"
+                  width="640"
+                  height="360"
+                  loading="lazy"
                   class="w-full h-full object-cover"
                 />
                 <div

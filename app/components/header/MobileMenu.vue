@@ -1,4 +1,5 @@
 <script setup>
+const props = defineProps(["pageList"]);
 const emit = defineEmits(["closeMenu"]);
 </script>
 
@@ -16,53 +17,13 @@ const emit = defineEmits(["closeMenu"]);
     >
       <div class="flex flex-col gap-4">
         <NuxtLink
-          to="#home"
+          v-for="(item, index) in props.pageList"
+          :key="index"
+          :to="item.path"
           @click="emit('closeMenu')"
           class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
         >
-          Home
-        </NuxtLink>
-        <NuxtLink
-          to="#about"
-          @click="emit('closeMenu')"
-          class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
-        >
-          About
-        </NuxtLink>
-        <NuxtLink
-          to="#projects"
-          @click="emit('closeMenu')"
-          class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
-        >
-          Projects
-        </NuxtLink>
-        <NuxtLink
-          to="#business"
-          @click="emit('closeMenu')"
-          class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
-        >
-          Business
-        </NuxtLink>
-        <NuxtLink
-          to="#organizations"
-          @click="emit('closeMenu')"
-          class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
-        >
-          Organizations
-        </NuxtLink>
-        <NuxtLink
-          to="#uses"
-          @click="emit('closeMenu')"
-          class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
-        >
-          Uses
-        </NuxtLink>
-        <NuxtLink
-          to="#contact"
-          @click="emit('closeMenu')"
-          class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 text-center"
-        >
-          Contact
+          {{ item.label }}
         </NuxtLink>
       </div>
     </div>

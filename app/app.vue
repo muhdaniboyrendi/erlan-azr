@@ -1,8 +1,7 @@
+<!-- app.vue -->
 <template>
   <NuxtLoadingIndicator />
-  <div class="relative font-primary min-h-screen overflow-hidden">
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+  <div class="relative font-primary min-h-screen bg-dark overflow-hidden">
+    <NuxtPage />
   </div>
 </template>

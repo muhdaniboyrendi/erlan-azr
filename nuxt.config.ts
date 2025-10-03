@@ -110,7 +110,7 @@ export default defineNuxtConfig({
         {
           rel: "preload",
           as: "style",
-          href: "https://fonts.googleapis.com/css2?family=Cantata+One&family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap",
         },
       ],
     },

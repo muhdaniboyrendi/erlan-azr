@@ -2,6 +2,41 @@
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
 
+const pageList = ref([
+  {
+    label: "Home",
+    path: "/#home",
+  },
+  {
+    label: "About",
+    path: "/#about",
+  },
+  {
+    label: "Skills",
+    path: "/#skills",
+  },
+  {
+    label: "Projects",
+    path: "/#projects",
+  },
+  {
+    label: "Business",
+    path: "/#business",
+  },
+  {
+    label: "Organizations",
+    path: "/#organizations",
+  },
+  {
+    label: "Uses",
+    path: "/#uses",
+  },
+  {
+    label: "Contact",
+    path: "/#contact",
+  },
+]);
+
 const handleScroll = () => {
   if (window.scrollY > 50) {
     isScrolled.value = true;
@@ -44,7 +79,12 @@ onUnmounted(() => {
         ]"
       >
         <NuxtLink to="/">
-          <NuxtImg src="/favicon.png" width="50" height="50" />
+          <NuxtImg
+            src="/favicon.png"
+            width="50"
+            height="50"
+            alt="Erlan Azhari logo"
+          />
         </NuxtLink>
       </div>
       <div
@@ -58,73 +98,12 @@ onUnmounted(() => {
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-10">
           <NuxtLink
-            to="#home"
+            v-for="(item, index) in pageList"
+            :key="index"
+            :to="item.path"
             class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
           >
-            Home
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#about"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            About
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#skills"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            Skills
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#projects"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            Projects
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#business"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            Business
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#organizations"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            Organizations
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#uses"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            Uses
-            <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
-            ></span>
-          </NuxtLink>
-          <NuxtLink
-            to="#contact"
-            class="text-slate-300 hover:text-cyan-400 transition-all duration-300 relative group"
-          >
-            Contact
+            {{ item.label }}
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"
             ></span>
@@ -164,6 +143,7 @@ onUnmounted(() => {
         <!-- Mobile Menu -->
         <HeaderMobileMenu
           v-show="isMobileMenuOpen"
+          :page-list="pageList"
           @close-menu="closeMobileMenu"
         />
       </div>

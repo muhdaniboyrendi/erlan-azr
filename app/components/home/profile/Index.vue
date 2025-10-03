@@ -126,8 +126,8 @@
                   <!-- Replace this with actual image -->
                   <NuxtImg
                     src="/favicon.png"
-                    width="600"
-                    height="800"
+                    width="400"
+                    height="400"
                     alt="Muhdani Boyrendi Erlan Azhari"
                     class="w-full h-full object-cover object-center"
                   />

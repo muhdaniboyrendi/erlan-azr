@@ -1,3 +1,4 @@
+<!-- components/welcome.vue -->
 <script setup>
 const emit = defineEmits(["open"]);
 </script>
@@ -37,7 +38,12 @@ const emit = defineEmits(["open"]);
             <div
               class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center"
             >
-              <NuxtImg src="favicon.png" width="200" height="200" />
+              <NuxtImg
+                src="favicon.png"
+                width="200"
+                height="200"
+                alt="Erlan Azhari logo"
+              />
             </div>
           </div>
         </div>

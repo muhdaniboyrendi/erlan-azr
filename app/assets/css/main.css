@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Cantata+One&family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("/_nuxt/bootstrap-icons.mSm7cUeB.woff2?e348531…") format("woff2");
+  /* Tambahkan baris ini */
+  font-display: swap;
+}
 
 @theme {
-  --color-primary: #5b64d9;
-  --color-secondary: #ec6a8d;
-  --color-tertiary: #a645a2;
   --color-dark: #121214;
 
   --font-primary: "Quicksand", sans-serif;
-  --font-secondary: "Cantata One", serif;
-  --font-tertiary: "Fredoka", sans-serif;
 }
 
 html {

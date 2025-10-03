@@ -78,10 +78,15 @@
             >
               <div class="grid md:grid-cols-2 gap-0">
                 <!-- Left: Image -->
-                <div class="relative h-96 md:h-auto overflow-hidden">
+                <div
+                  class="relative aspect-[4/3] h-96 md:h-auto overflow-hidden"
+                >
                   <NuxtImg
                     src="/projects/ea-invitation.png"
                     alt="Featured Business"
+                    width="400"
+                    height="300"
+                    loading="lazy"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div

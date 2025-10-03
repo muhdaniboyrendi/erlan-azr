@@ -192,14 +192,14 @@ const featuredOrg = ref({
                 </div>
 
                 <!-- Right: Image/Visual -->
-                <div class="relative h-96 md:h-auto overflow-hidden">
+                <div class="relative aspect-[4/3] overflow-hidden">
                   <NuxtImg
                     :src="featuredOrg.image"
                     alt="Featured Organization"
                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
-                    width="800"
-                    height="600"
+                    width="400"
+                    height="300"
                   />
 
                   <!-- Achievements Overlay -->

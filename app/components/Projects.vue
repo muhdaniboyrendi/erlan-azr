@@ -24,6 +24,16 @@ const projects = ref([
     year: "2025",
   },
   {
+    title: "Student Management",
+    description: "A website to manage students and teachers.",
+    image: "/projects/student-management.png",
+    tags: ["Web App"],
+    techStack: ["Vue.js", "Tailwind CSS", "Laravel", "MySQL"],
+    liveUrl: "https://personal-notes-tawny-five.vercel.app/",
+    githubUrl: "https://github.com/muhdaniboyrendi/personal-notes",
+    year: "2024",
+  },
+  {
     title: "Note App",
     description: "A website that I created for practice React.js.",
     image: "/projects/note-app.png",
@@ -39,7 +49,7 @@ const projects = ref([
 <template>
   <section
     id="projects"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-28 px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -188,30 +198,6 @@ const projects = ref([
             </div>
           </div>
         </motion>
-      </div>
-
-      <!-- View All Button -->
-      <div class="text-center mt-12 animate-fade-in-up animation-delay-600">
-        <NuxtLink
-          to="/projects"
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
-        >
-          <button
-            class="group relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
-          >
-            <span class="relative z-10 flex items-center gap-2">
-              View All Projects
-              <i
-                class="bi bi-arrow-right group-hover:translate-x-1 transition-transform duration-300"
-              ></i>
-            </span>
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></div>
-          </button>
-        </NuxtLink>
       </div>
     </div>
   </section>
