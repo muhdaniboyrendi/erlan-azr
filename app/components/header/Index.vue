@@ -114,6 +114,7 @@ onUnmounted(() => {
         <div class="w-full flex justify-end md:hidden">
           <button
             @click="toggleMobileMenu"
+            aria-label="Open and close menu button"
             class="text-cyan-400 hover:text-cyan-300 transition-colors"
           >
             <svg

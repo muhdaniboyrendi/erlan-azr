@@ -173,7 +173,7 @@ const projects = ref([
                 </div>
               </div>
 
-              <!-- Project Stats -->
+              <!-- Project button -->
               <div
                 class="flex items-center justify-between pt-4 border-t border-gray-700/50"
               >
@@ -181,6 +181,7 @@ const projects = ref([
                   <a
                     :href="project.liveUrl"
                     target="_blank"
+                    aria-label="Live demo"
                     class="group h-10 aspect-square flex justify-center items-center border-2 border-purple-400/50 rounded-lg font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-400/10 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
                   >
                     <i class="bi bi-box-arrow-up-right text-base"></i>
@@ -188,6 +189,7 @@ const projects = ref([
                   <a
                     :href="project.githubUrl"
                     target="_blank"
+                    aria-label="View source code"
                     class="group h-10 aspect-square flex justify-center items-center border-2 border-purple-400/50 rounded-lg font-semibold text-purple-300 transition-all duration-300 hover:bg-purple-400/10 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
                   >
                     <i class="bi bi-github text-base"></i>

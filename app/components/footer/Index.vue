@@ -31,6 +31,7 @@
             <a
               href="https://www.instagram.com/erlan.azr_/"
               target="_blank"
+              aria-label="Visit instagram"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
               <i class="bi bi-instagram text-lg"></i>
@@ -41,6 +42,7 @@
             <a
               href="https://www.linkedin.com/in/muhdani-boyrendi/"
               target="_blank"
+              aria-label="Visit linkedin"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
               <i class="bi bi-linkedin text-lg"></i>
@@ -51,6 +53,7 @@
             <a
               href="https://github.com/muhdaniboyrendi"
               target="_blank"
+              aria-label="Visit github"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
               <i class="bi bi-github text-lg"></i>
@@ -61,6 +64,7 @@
             <a
               href="https://discord.gg/MfzpYpBV"
               target="_blank"
+              aria-label="Visit discord"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
               <i class="bi bi-discord text-lg"></i>
@@ -71,6 +75,7 @@
             <a
               href="https://www.tiktok.com/@erlan.azr"
               target="_blank"
+              aria-label="Visit tiktok"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
               <i class="bi bi-tiktok text-lg"></i>

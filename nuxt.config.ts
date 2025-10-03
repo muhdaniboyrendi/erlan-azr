@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css", "bootstrap-icons/font/bootstrap-icons.css"],
+  css: ["~/assets/css/main.css", "~/assets/css/bootstrap-icons-override.css"],
   vite: {
     plugins: [tailwindcss()],
   },
@@ -105,22 +105,43 @@ export default defineNuxtConfig({
           href: "/apple-touch-icon.png",
         },
         { rel: "canonical", href: "https://erlanazhari.my.id" },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
         {
-          rel: "preload",
-          as: "style",
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "anonymous",
+        },
+        {
+          rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap",
+          media: "print",
+          onload: "this.media='all'", // Defer loading
         },
       ],
     },
   },
   ssr: true,
+  image: {
+    format: ["webp", "avif"], // Modern format, fallback ke webp
+    quality: 80, // Balance antara ukuran dan kualitas
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: ["/sitemap.xml", "/robots.txt"],
     },
+    compressPublicAssets: true,
   },
   sitemap: {
     hostname: "https://erlanazhari.my.id",

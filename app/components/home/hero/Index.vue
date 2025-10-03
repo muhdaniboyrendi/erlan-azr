@@ -164,6 +164,7 @@ onUnmounted(() => {
           <a
             href="https://www.instagram.com/erlan.azr_/"
             target="_blank"
+            aria-label="Visit instagram"
             class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
           >
             <i class="bi bi-instagram"></i>
@@ -171,6 +172,7 @@ onUnmounted(() => {
           <a
             href="https://www.linkedin.com/in/muhdani-boyrendi/"
             target="_blank"
+            aria-label="Visit linkedin"
             class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
           >
             <i class="bi bi-linkedin"></i>
@@ -178,12 +180,14 @@ onUnmounted(() => {
           <a
             href="https://github.com/muhdaniboyrendi"
             target="_blank"
+            aria-label="Visit github"
             class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
           >
             <i class="bi bi-github"></i>
           </a>
           <a
             href="mailto:erlanazrdev@gmail.com"
+            aria-label="Send email"
             class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
           >
             <i class="bi bi-envelope"></i>
@@ -191,6 +195,7 @@ onUnmounted(() => {
           <a
             href="https://wa.me/+6282220633024"
             target="_blank"
+            aria-label="Visit whatsapp"
             class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
           >
             <i class="bi bi-whatsapp"></i>
