@@ -5,23 +5,12 @@ const emit = defineEmits(["open"]);
 
 <template>
   <section
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950"
+    class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-dark to-gray-950"
   >
     <!-- Grid Background -->
     <div class="absolute inset-0 opacity-20">
       <div class="grid-pattern"></div>
     </div>
-
-    <!-- Floating Orbs -->
-    <div
-      class="absolute top-20 left-10 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl animate-pulse-slow"
-    ></div>
-    <div
-      class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"
-    ></div>
-    <div
-      class="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"
-    ></div>
 
     <!-- Content -->
     <div class="relative max-w-4xl mx-auto px-6 py-16 text-center">
@@ -84,7 +73,7 @@ const emit = defineEmits(["open"]);
         <button
           @click="emit('open')"
           type="button"
-          class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] active:scale-95"
+          class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] active:scale-95 cursor-pointer"
         >
           <span class="relative z-10">Start Explore</span>
           <i

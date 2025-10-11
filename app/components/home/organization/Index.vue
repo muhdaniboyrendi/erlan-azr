@@ -192,31 +192,19 @@ const featuredOrg = ref({
                 </div>
 
                 <!-- Right: Image/Visual -->
-                <div class="relative aspect-[4/3] overflow-hidden">
+                <div class="relative aspect-[4/3] h-96 md:h-auto overflow-hidden">
                   <NuxtImg
                     :src="featuredOrg.image"
                     alt="Featured Organization"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                     width="400"
                     height="300"
                   />
-
-                  <!-- Achievements Overlay -->
                   <div
-                    class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-dark/80 to-transparent"
-                  >
-                    <ul class="space-y-2">
-                      <li
-                        v-for="(achievement, idx) in featuredOrg.achievements"
-                        :key="idx"
-                        class="text-sm text-gray-300 flex items-start gap-2"
-                      >
-                        <span class="text-cyan-400 mt-1">✓</span>
-                        <span>{{ achievement }}</span>
-                      </li>
-                    </ul>
-                  </div>
+                    class="absolute inset-0 bg-gradient-to-l from-gray-900/80 to-gray-900/30"
+                  ></div>
+
                 </div>
               </div>
             </div>

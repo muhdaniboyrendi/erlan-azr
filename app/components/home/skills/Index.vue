@@ -71,12 +71,16 @@ const toolsSkills = ref([
     image: "/brand/postman.png",
   },
   {
+    name: "VS Code",
+    image: "/brand/vscode.png",
+  },
+  {
     name: "Figma",
     image: "/brand/figma.png",
   },
   {
-    name: "VS Code",
-    image: "/brand/vscode.png",
+    name: "Canva",
+    image: "/brand/canva.png",
   },
 ]);
 </script>
