@@ -77,14 +77,6 @@ const accessoriesItems = ref([
       <div class="grid-pattern"></div>
     </div>
 
-    <!-- Floating Gradient Orbs -->
-    <div
-      class="absolute top-32 right-20 w-96 h-96 bg-cyan-400/10 rounded-full blur-[120px] animate-blob"
-    ></div>
-    <div
-      class="absolute bottom-32 left-20 w-96 h-96 bg-pink-400/10 rounded-full blur-[120px] animate-blob animation-delay-2000"
-    ></div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <!-- Section Header -->

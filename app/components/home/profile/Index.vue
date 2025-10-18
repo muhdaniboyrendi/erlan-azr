@@ -8,14 +8,6 @@
       <div class="grid-pattern"></div>
     </div>
 
-    <!-- Floating Gradient Orbs -->
-    <div
-      class="absolute top-20 left-10 w-72 h-72 bg-cyan-400/20 rounded-full blur-[120px] animate-blob"
-    ></div>
-    <div
-      class="absolute bottom-20 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-[120px] animate-blob animation-delay-2000"
-    ></div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <div class="grid md:grid-cols-2 gap-12 items-center">

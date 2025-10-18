@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       },
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "Muhdani Boyrendi Erlan Azhari",
+      title: "Muhdani Boyrendi Erlan Azhari - Full Stack Developer",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -32,6 +32,7 @@ export default defineNuxtConfig({
           content:
             "Full Stack Developer specializing in modern web technologies.",
         },
+        { name: "application-name", content: "Erlan Azhari" },
 
         // Open Graph Meta Tags
         { property: "og:type", content: "website" },
@@ -87,18 +88,7 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "32x32",
-          href: "/favicon-32x32.png",
-        },
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-          href: "/favicon-16x16.png",
-        },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
@@ -118,6 +108,26 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap",
           media: "print",
           onload: "this.media='all'", // Defer loading
+        },
+        { rel: "canonical", href: "https://erlanazhari.my.id" },
+      ],
+      script: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Erlan Azhari",
+            alternateName: "Muhdani Boyrendi Erlan Azhari",
+            url: "https://erlanazhari.my.id",
+            jobTitle: "Full Stack Developer",
+            description:
+              "Full Stack Developer specializing in modern web technologies",
+            sameAs: [
+              "https://id.linkedin.com/in/muhdani-boyrendi-erlan-azhari-...",
+              "https://www.instagram.com/erlan.azr_/",
+            ],
+          }),
         },
       ],
     },

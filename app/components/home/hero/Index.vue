@@ -27,23 +27,15 @@ onUnmounted(() => {
 <template>
   <section
     id="home"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-dark to-gray-950 pb-34 pt-28"
+    class="flex items-center justify-center overflow-hidden bg-linear-to-br from-dark to-gray-950 pb-34 pt-28"
   >
     <!-- Grid Background -->
     <div class="absolute inset-0 opacity-20">
       <div class="grid-pattern"></div>
     </div>
 
-    <!-- Floating Orbs -->
-    <div
-      class="absolute top-20 left-10 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl animate-pulse-slow"
-    ></div>
-    <div
-      class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"
-    ></div>
-
     <!-- Content -->
-    <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+    <div class="max-w-6xl mx-auto px-6 text-center">
       <!-- Badge -->
       <motion
         :initial="{ opacity: 0, y: 20 }"
@@ -125,12 +117,9 @@ onUnmounted(() => {
         >
           <NuxtLink
             to="#projects"
-            class="group relative px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+            class="group flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-purple-500 hover:to-pink-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] active:scale-95 cursor-pointer"
           >
-            <span class="relative z-10">View My Projects</span>
-            <div
-              class="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></div>
+            <span>View My Projects</span>
           </NuxtLink>
         </motion>
 
@@ -141,7 +130,7 @@ onUnmounted(() => {
         >
           <NuxtLink
             to="#contact"
-            class="group px-8 py-4 border-2 border-cyan-400/50 rounded-lg font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-400/10 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95"
+            class="group flex items-center px-8 py-4 border-2 border-cyan-400/50 rounded-lg font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-400/10 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95"
           >
             Get In Touch
             <span

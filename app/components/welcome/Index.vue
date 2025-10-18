@@ -5,7 +5,7 @@ const emit = defineEmits(["open"]);
 
 <template>
   <section
-    class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-dark to-gray-950"
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark to-gray-950"
   >
     <!-- Grid Background -->
     <div class="absolute inset-0 opacity-20">
@@ -13,7 +13,7 @@ const emit = defineEmits(["open"]);
     </div>
 
     <!-- Content -->
-    <div class="relative max-w-4xl mx-auto px-6 py-16 text-center">
+    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
       <!-- Logo/Icon -->
       <motion
         :initial="{ opacity: 0, scale: 0 }"
@@ -69,19 +69,17 @@ const emit = defineEmits(["open"]);
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
         :transition="{ duration: 1, delay: 1.5 }"
+        class="w-fit mx-auto"
       >
         <button
           @click="emit('open')"
           type="button"
-          class="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] active:scale-95 cursor-pointer"
+          class="group flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-purple-500 hover:to-pink-500 rounded-lg font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] active:scale-95 cursor-pointer"
         >
           <span class="relative z-10">Start Explore</span>
           <i
             class="bi bi-arrow-right z-10 transform group-hover:translate-x-1 transition-transform"
           ></i>
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          ></div>
         </button>
       </motion>
     </div>
