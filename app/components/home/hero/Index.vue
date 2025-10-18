@@ -35,7 +35,7 @@ onUnmounted(() => {
     </div>
 
     <!-- Content -->
-    <div class="max-w-6xl mx-auto px-6 text-center">
+    <div class="z-10 max-w-6xl mx-auto px-6 text-center">
       <!-- Badge -->
       <motion
         :initial="{ opacity: 0, y: 20 }"
@@ -108,7 +108,7 @@ onUnmounted(() => {
 
       <!-- CTA Buttons -->
       <div
-        class="flex flex-col sm:flex-row gap-y-12 gap-x-4 justify-center items-center animate-fade-in-up animation-delay-600"
+        class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up animation-delay-600"
       >
         <motion
           :initial="{ opacity: 0, x: -30 }"
