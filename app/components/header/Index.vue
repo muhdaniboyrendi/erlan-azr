@@ -1,5 +1,4 @@
 <script setup>
-const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
 
 const pageList = ref([
@@ -37,14 +36,6 @@ const pageList = ref([
   },
 ]);
 
-const handleScroll = () => {
-  if (window.scrollY > 50) {
-    isScrolled.value = true;
-  } else {
-    isScrolled.value = false;
-  }
-};
-
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
@@ -52,30 +43,18 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
-
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>
 
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-500 gap-4',
-      isScrolled ? 'mt-4 mx-4 md:mx-6' : 'mt-0 mx-0',
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-500 gap-4 mt-4 mx-4 md:mx-6',
     ]"
   >
     <div class="w-full max-w-7xl flex justify-between gap-4">
       <div
         :class="[
-          'w-fit h-fit flex transition-all duration-500 p-2 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)]',
-          isScrolled
-            ? 'rounded-2xl border justify-between'
-            : 'rounded-2xl rounded-tl-none border-b border-r',
+          'w-fit h-fit flex transition-all duration-500 p-2 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)] rounded-2xl border justify-between',
         ]"
       >
         <NuxtLink to="/">
@@ -89,10 +68,7 @@ onUnmounted(() => {
       </div>
       <div
         :class="[
-          'w-full md:w-fit flex flex-wrap transition-all duration-500 p-4 md:py-6 md:px-12 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)]',
-          isScrolled
-            ? 'rounded-2xl border'
-            : 'rounded-2xl rounded-tr-none border-b border-l',
+          'w-full md:w-fit flex flex-wrap transition-all duration-500 p-4 md:py-6 md:px-12 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)] rounded-2xl border',
         ]"
       >
         <!-- Desktop Menu -->

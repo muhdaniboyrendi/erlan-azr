@@ -62,17 +62,6 @@
               ></div>
             </a>
             <a
-              href="https://discord.gg/MfzpYpBV"
-              target="_blank"
-              aria-label="Visit discord"
-              class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
-            >
-              <i class="bi bi-discord text-lg"></i>
-              <div
-                class="absolute inset-0 rounded-lg bg-cyan-400/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              ></div>
-            </a>
-            <a
               href="https://www.tiktok.com/@erlan.azr"
               target="_blank"
               aria-label="Visit tiktok"
@@ -223,6 +212,7 @@
             class="text-sky-400 hover:underline"
             >Tailwind CSS</a
           >
+          . All rights reserved.
         </p>
         <a
           href="https://github.com/muhdaniboyrendi/erlan-azr"
@@ -241,7 +231,8 @@ const currentYear = computed(() => new Date().getFullYear());
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px);
   background-size: 120px 120px;
   width: 100%;

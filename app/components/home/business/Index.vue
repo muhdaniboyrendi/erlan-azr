@@ -1,7 +1,7 @@
 <template>
   <section
     id="business"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -100,7 +100,7 @@
                     <span
                       class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-400/20 border border-purple-400/30 text-purple-100"
                     >
-                      Comming Soon
+                      Beta
                     </span>
                   </div>
 
@@ -113,48 +113,14 @@
 
                   <!-- Description -->
                   <p class="text-gray-300 text-lg mb-6 leading-relaxed">
-                    A SaaS platform to create and manage digital wedding
-                    invitation with full customisable.
+                    A SaaS platform to create and manage modern and interactive
+                    digital wedding invitation in a minutes.
                   </p>
-
-                  <!-- Stats -->
-                  <!-- <div class="grid grid-cols-3 gap-4 mb-6">
-                    <div
-                      class="p-4 rounded-xl bg-gray-900/50 border border-gray-700/50"
-                    >
-                      <div
-                        class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-                      >
-                        10k+
-                      </div>
-                      <div class="text-gray-400 text-xs mt-1">Users</div>
-                    </div>
-                    <div
-                      class="p-4 rounded-xl bg-gray-900/50 border border-gray-700/50"
-                    >
-                      <div
-                        class="text-2xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent"
-                      >
-                        $500k
-                      </div>
-                      <div class="text-gray-400 text-xs mt-1">ARR</div>
-                    </div>
-                    <div
-                      class="p-4 rounded-xl bg-gray-900/50 border border-gray-700/50"
-                    >
-                      <div
-                        class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-                      >
-                        95%
-                      </div>
-                      <div class="text-gray-400 text-xs mt-1">Satisfaction</div>
-                    </div>
-                  </div> -->
 
                   <!-- CTA Buttons -->
                   <div class="flex flex-wrap gap-3">
                     <a
-                      href="https://ea-invitation-landing.vercel.app/"
+                      href="https://eainvitation.com"
                       target="_blank"
                       class="group/btn relative px-6 py-3 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
                     >
@@ -219,10 +185,8 @@
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(
-      rgba(168, 85, 247, 0.5) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
   background-size: 120px 120px;
   width: 100%;
@@ -231,24 +195,9 @@
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5),
-    0 0 20px rgba(168, 85, 247, 0.3), 0 0 30px rgba(168, 85, 247, 0.2);
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.5),
+    0 0 20px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(168, 85, 247, 0.2);
 }
 </style>

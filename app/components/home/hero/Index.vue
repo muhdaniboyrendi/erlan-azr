@@ -27,7 +27,7 @@ onUnmounted(() => {
 <template>
   <section
     id="home"
-    class="flex items-center justify-center overflow-hidden bg-linear-to-br from-dark to-gray-950 pb-34 pt-28"
+    class="flex items-center justify-center overflow-hidden bg-linear-to-br from-dark to-gray-950 pt-40 pb-12"
   >
     <!-- Grid Background -->
     <div class="absolute inset-0 opacity-20">
@@ -140,57 +140,6 @@ onUnmounted(() => {
           </NuxtLink>
         </motion>
       </div>
-
-      <!-- Social Links -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 1.8 }"
-      >
-        <div
-          class="flex gap-6 justify-center mt-16 animate-fade-in-up animation-delay-800"
-        >
-          <a
-            href="https://www.instagram.com/erlan.azr_/"
-            target="_blank"
-            aria-label="Visit instagram"
-            class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
-          >
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/muhdani-boyrendi/"
-            target="_blank"
-            aria-label="Visit linkedin"
-            class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
-          >
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/muhdaniboyrendi"
-            target="_blank"
-            aria-label="Visit github"
-            class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
-          >
-            <i class="bi bi-github"></i>
-          </a>
-          <a
-            href="mailto:erlanazrdev@gmail.com"
-            aria-label="Send email"
-            class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
-          >
-            <i class="bi bi-envelope"></i>
-          </a>
-          <a
-            href="https://wa.me/+6282220633024"
-            target="_blank"
-            aria-label="Visit whatsapp"
-            class="text-gray-400 hover:text-cyan-400 text-2xl transition-all duration-300 hover:scale-110 transform"
-          >
-            <i class="bi bi-whatsapp"></i>
-          </a>
-        </div>
-      </motion>
     </div>
 
     <!-- Scroll Indicator -->

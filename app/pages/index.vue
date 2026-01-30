@@ -23,7 +23,6 @@ onMounted(() => {
         <LazyHomeSkills />
         <LazyHomeProjects />
         <LazyHomeBusiness />
-        <LazyHomeOrganization />
         <LazyHomeUses />
         <LazyHomeContact />
         <LazyFooter />

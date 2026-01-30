@@ -39,7 +39,7 @@ const projects = ref([
 <template>
   <section
     id="projects"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -90,7 +90,7 @@ const projects = ref([
       </div>
 
       <!-- Projects Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <motion
           v-for="(project, index) in projects"
           :key="index"
@@ -131,7 +131,7 @@ const projects = ref([
             </div>
 
             <!-- Project Content -->
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <!-- Title -->
               <h3
                 class="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
@@ -186,26 +186,27 @@ const projects = ref([
 
       <!-- View All Button -->
       <div class="text-center mt-12 animate-fade-in-up animation-delay-600">
-        <NuxtLink
-          to="/projects"
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
+        <motion
+          :initial="{ opacity: 0, x: -20 }"
+          :whileInView="{ opacity: 1, x: 0 }"
           :transition="{ duration: 0.5, delay: 0.3 }"
         >
-          <button
-            class="group relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
-          >
-            <span class="relative z-10 flex items-center gap-2">
-              View All Projects
-              <i
-                class="bi bi-arrow-right group-hover:translate-x-1 transition-transform duration-300"
-              ></i>
-            </span>
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></div>
-          </button>
-        </NuxtLink>
+          <NuxtLink to="/projects">
+            <button
+              class="group relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
+            >
+              <span class="relative z-10 flex items-center gap-2">
+                View All Projects
+                <i
+                  class="bi bi-arrow-right group-hover:translate-x-1 transition-transform duration-300"
+                ></i>
+              </span>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </button>
+          </NuxtLink>
+        </motion>
       </div>
     </div>
   </section>
@@ -213,10 +214,8 @@ const projects = ref([
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(
-      rgba(168, 85, 247, 0.5) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
   background-size: 60px 60px;
   width: 100%;
@@ -225,28 +224,9 @@ const projects = ref([
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5),
-    0 0 20px rgba(168, 85, 247, 0.3), 0 0 30px rgba(168, 85, 247, 0.2);
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.5),
+    0 0 20px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(168, 85, 247, 0.2);
 }
 </style>

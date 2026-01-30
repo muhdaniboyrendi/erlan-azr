@@ -88,7 +88,7 @@ const toolsSkills = ref([
 <template>
   <section
     id="skills"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -236,7 +236,8 @@ const toolsSkills = ref([
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
   background-size: 120px 120px;
   width: 100%;
@@ -245,28 +246,9 @@ const toolsSkills = ref([
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3),
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.5),
+    0 0 20px rgba(6, 182, 212, 0.3),
     0 0 30px rgba(6, 182, 212, 0.2);
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
 }
 </style>

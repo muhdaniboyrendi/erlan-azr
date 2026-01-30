@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -73,7 +73,7 @@
           </motion>
 
           <!-- Action Buttons -->
-          <div class="flex flex-wrap gap-4 pt-4">
+          <!-- <div class="flex flex-wrap gap-4 pt-4">
             <motion
               :initial="{ opacity: 0, x: -20 }"
               :whileInView="{ opacity: 1, x: 0 }"
@@ -91,7 +91,7 @@
                 ></div>
               </button>
             </motion>
-          </div>
+          </div> -->
         </div>
 
         <!-- Right Content - Photo -->
@@ -101,7 +101,7 @@
           :transition="{ duration: 0.5, delay: 0.3 }"
         >
           <div class="relative animate-fade-in-right flex justify-end">
-            <div class="relative group w-full max-w-sm">
+            <div class="relative group w-full max-w-sm mx-auto md:mx-0">
               <!-- Gradient Border Container -->
               <div
                 class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-500 animate-pulse-slow"
@@ -140,7 +140,8 @@
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
   background-size: 60px 60px;
   width: 100%;
@@ -149,7 +150,9 @@
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3),
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.5),
+    0 0 20px rgba(6, 182, 212, 0.3),
     0 0 30px rgba(6, 182, 212, 0.2);
 }
 
@@ -165,26 +168,5 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
 }
 </style>

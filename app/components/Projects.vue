@@ -49,7 +49,7 @@ const projects = ref([
 <template>
   <section
     id="projects"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-28 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark pt-40 pb-28 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -100,7 +100,7 @@ const projects = ref([
       </div>
 
       <!-- Projects Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <motion
           v-for="(project, index) in projects"
           :key="index"
@@ -199,10 +199,8 @@ const projects = ref([
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(
-      rgba(168, 85, 247, 0.5) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
   background-size: 60px 60px;
   width: 100%;
@@ -211,8 +209,10 @@ const projects = ref([
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5),
-    0 0 20px rgba(168, 85, 247, 0.3), 0 0 30px rgba(168, 85, 247, 0.2);
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.5),
+    0 0 20px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(168, 85, 247, 0.2);
 }
 
 @keyframes blob {

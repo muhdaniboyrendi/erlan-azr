@@ -40,19 +40,6 @@ const socialLinks = ref([
       "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-300 group-hover:to-gray-400 group-hover:bg-clip-text",
   },
   {
-    name: "X",
-    handle: "@ErlanAzr",
-    url: "https://x.com/ErlanAzr?t=A6O-3yXrCGXNbg363rKJpA&s=08",
-    icon: "bi-twitter-x",
-    iconBg: "bg-gradient-to-br from-gray-700/20 to-gray-900/20",
-    iconColor: "text-gray-200 group-hover:text-white",
-    borderColor:
-      "border-gray-400/20 hover:border-gray-400/50 hover:shadow-[0_0_40px_rgba(156,163,175,0.3)]",
-    gradientBg: "bg-gradient-to-br from-gray-700/5 to-gray-900/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-200 group-hover:to-gray-400 group-hover:bg-clip-text",
-  },
-  {
     name: "WhatsApp",
     handle: "+62 822-2063-3024",
     url: "https://wa.me/6282220633024",
@@ -79,22 +66,9 @@ const socialLinks = ref([
       "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text",
   },
   {
-    name: "Discord",
-    handle: "Erlan Azr",
-    url: "https://discord.gg/MfzpYpBV",
-    icon: "bi-discord",
-    iconBg: "bg-gradient-to-br from-indigo-400/20 to-purple-400/20",
-    iconColor: "text-indigo-400 group-hover:text-white",
-    borderColor:
-      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
-    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
-    titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
-  },
-  {
     name: "Tik Tok",
     handle: "@erlan.azr",
-    url: "https://www.tiktok.com/@erlan.azr",
+    url: "https://www.tiktok.com/@erlan.azr?_r=1&_t=ZS-93Udhi6SGyD",
     icon: "bi-tiktok",
     iconBg: "bg-gradient-to-br from-cyan-300/20 to-pink-400/20",
     iconColor: "text-gray-200 group-hover:text-white",
@@ -110,7 +84,7 @@ const socialLinks = ref([
 <template>
   <section
     id="contact"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -162,21 +136,17 @@ const socialLinks = ref([
       </div>
 
       <!-- Social Media Grid -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :whileInView="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
-      >
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          <a
-            v-for="(social, index) in socialLinks"
-            :key="index"
-            :href="social.url"
-            target="_blank"
-            class="group relative rounded-2xl bg-dark border transition-all duration-500 hover:scale-105 overflow-hidden"
-            :class="social.borderColor"
-            :style="{ animationDelay: `${index * 0.1}s` }"
-          >
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-16">
+        <motion
+          v-for="(social, index) in socialLinks"
+          :key="index"
+          class="group relative rounded-2xl bg-dark border overflow-hidden"
+          :class="social.borderColor"
+          :initial="{ opacity: 0, y: 30 }"
+          :whileInView="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.5, delay: 0.3 }"
+        >
+          <a :href="social.url" target="_blank">
             <!-- Background Gradient on Hover -->
             <div
               class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -185,7 +155,7 @@ const socialLinks = ref([
 
             <!-- Content -->
             <div
-              class="relative z-10 flex items-center gap-4 p-6"
+              class="relative z-10 flex items-center gap-3 md:gap-4 p-3 md:p-4"
               :class="social.gradientBg"
             >
               <!-- Icon -->
@@ -202,7 +172,7 @@ const socialLinks = ref([
               <!-- Text -->
               <div class="flex-1">
                 <h3
-                  class="text-lg font-bold text-white mb-1 transition-all duration-300"
+                  class="text-lg font-bold text-white md:mb-1 transition-all duration-300"
                   :class="social.titleHover"
                 >
                   {{ social.name }}
@@ -216,15 +186,16 @@ const socialLinks = ref([
               ></i>
             </div>
           </a>
-        </div>
-      </motion>
+        </motion>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
   background-size: 60px 60px;
   width: 100%;
@@ -233,32 +204,9 @@ const socialLinks = ref([
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3),
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.5),
+    0 0 20px rgba(6, 182, 212, 0.3),
     0 0 30px rgba(6, 182, 212, 0.2);
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
 }
 </style>

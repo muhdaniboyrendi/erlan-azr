@@ -70,7 +70,7 @@ const accessoriesItems = ref([
 <template>
   <section
     id="uses"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-6"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-4 md:px-6"
   >
     <!-- Animated Grid Background -->
     <div class="absolute inset-0 opacity-10">
@@ -146,7 +146,7 @@ const accessoriesItems = ref([
       <!-- Hardware Items Grid -->
       <div
         v-if="activeCategory === 'Hardware'"
-        class="grid md:grid-cols-2 gap-6"
+        class="grid md:grid-cols-2 gap-4 md:gap-6"
       >
         <motion
           :initial="{ opacity: 0, y: 20 }"
@@ -158,8 +158,8 @@ const accessoriesItems = ref([
           <div
             class="group relative rounded-2xl bg-dark border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(6,182,212,0.2)] overflow-hidden"
           >
-            <div class="flex flex-col gap-6 bg-cyan-400/5 p-6">
-              <div class="flex gap-6">
+            <div class="flex flex-col gap-4 md:gap-6 bg-cyan-400/5 p-4 md:p-6">
+              <div class="flex gap-4 md:gap-6">
                 <!-- Icon/Image -->
                 <div
                   class="flex-shrink-0 w-20 h-20 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-400/20 border border-cyan-400/30 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300"
@@ -219,7 +219,7 @@ const accessoriesItems = ref([
                   </p>
                 </div>
 
-                <p class="text-gray-400 text-sm mb-4">
+                <p class="text-gray-400 text-sm mb-3 md:mb-4">
                   {{ item.description }}
                 </p>
 
@@ -247,7 +247,7 @@ const accessoriesItems = ref([
       <!-- Accessories Items Grid -->
       <div
         v-if="activeCategory === 'Accessories'"
-        class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
       >
         <motion
           :initial="{ opacity: 0, y: 20 }"
@@ -259,22 +259,22 @@ const accessoriesItems = ref([
           <div
             class="group relative rounded-2xl bg-dark border border-purple-400/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(244,114,182,0.2)] overflow-hidden"
           >
-            <div class="bg-purple-400/5 p-6">
+            <div class="bg-purple-400/5 p-4 md:p-6">
               <!-- Icon -->
               <div
-                class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-purple-400/20 to-cyan-400/20 border border-purple-400/30 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300"
+                class="w-12 h-12 mb-3 md:mb-4 rounded-xl bg-gradient-to-br from-purple-400/20 to-cyan-400/20 border border-purple-400/30 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300"
               >
                 {{ item.icon }}
               </div>
 
               <!-- Content -->
               <h3
-                class="text-base font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
+                class="text-base font-bold text-white mb-1 md:mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
               >
                 {{ item.name }}
               </h3>
 
-              <p class="text-gray-400 text-xs mb-2">{{ item.brand }}</p>
+              <p class="text-gray-400 text-xs mb-1 md:mb-2">{{ item.brand }}</p>
 
               <p class="text-gray-500 text-xs">{{ item.description }}</p>
             </div>
@@ -343,7 +343,8 @@ const accessoriesItems = ref([
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
   background-size: 120px 120px;
   width: 100%;
@@ -352,28 +353,9 @@ const accessoriesItems = ref([
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3),
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.5),
+    0 0 20px rgba(6, 182, 212, 0.3),
     0 0 30px rgba(6, 182, 212, 0.2);
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
 }
 </style>
