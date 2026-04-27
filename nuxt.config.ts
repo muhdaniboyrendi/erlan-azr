@@ -12,9 +12,9 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@pinia/nuxt",
     "@nuxt/image",
-    "motion-v/nuxt",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "@vueuse/motion/nuxt",
   ],
   app: {
     head: {

@@ -8,10 +8,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <motion
-    :initial="{ opacity: 0, y: 20 }"
-    :whileInView="{ opacity: 1, y: 0 }"
-    :transition="{ duration: 0.5, delay: 0.3 }"
+  <div
+    v-motion
+    :initial="{ opacity: 0, y: 100 }"
+    :visibleOnce="{ opacity: 1, y: 0 }"
+    :duration="1000"
   >
     <div
       class="group relative overflow-hidden rounded-xl bg-dark transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] cursor-pointer"
@@ -31,5 +32,5 @@ const props = defineProps({
         </div>
       </div>
     </div>
-  </motion>
+  </div>
 </template>

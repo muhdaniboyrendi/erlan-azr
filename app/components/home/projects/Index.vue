@@ -51,55 +51,53 @@ const projects = ref([
       <!-- Section Header -->
       <div class="text-center mb-16">
         <!-- Badge -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-400/10 backdrop-blur-sm mb-6"
         >
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-400/10 backdrop-blur-sm mb-6"
-          >
-            <span class="text-purple-300 text-sm font-medium">Portfolio</span>
-          </div>
-        </motion>
+          <span class="text-purple-300 text-sm font-medium">Portfolio</span>
+        </div>
 
         <!-- Title -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <h2
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"
         >
-          <h2
-            class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"
-          >
-            Featured Projects
-          </h2>
-        </motion>
+          Featured Projects
+        </h2>
 
         <!-- Description -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <p
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            Showcasing my recent work and personal projects that demonstrate my
-            expertise in modern web development
-          </p>
-        </motion>
+          Showcasing my recent work and personal projects that demonstrate my
+          expertise in modern web development
+        </p>
       </div>
 
       <!-- Projects Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        <motion
+        <div
           v-for="(project, index) in projects"
           :key="index"
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :delay="index * 200"
+          :duration="1000"
         >
           <div
-            class="group relative rounded-2xl overflow-hidden bg-dark border border-purple-400/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]"
+            class="group relative rounded-2xl overflow-hidden bg-dark border border-purple-400/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-101 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]"
           >
             <!-- Project Image -->
             <div
@@ -181,32 +179,32 @@ const projects = ref([
               </div>
             </div>
           </div>
-        </motion>
+        </div>
       </div>
 
       <!-- View All Button -->
       <div class="text-center mt-12 animate-fade-in-up animation-delay-600">
-        <motion
-          :initial="{ opacity: 0, x: -20 }"
-          :whileInView="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
         >
-          <NuxtLink to="/projects">
-            <button
-              class="group relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
-            >
-              <span class="relative z-10 flex items-center gap-2">
-                View All Projects
-                <i
-                  class="bi bi-arrow-right group-hover:translate-x-1 transition-transform duration-300"
-                ></i>
-              </span>
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              ></div>
-            </button>
+          <NuxtLink
+            to="/projects"
+            class="group block w-fit mx-auto relative px-8 py-4 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] active:scale-95"
+          >
+            <span class="relative z-10 flex items-center gap-2">
+              View All Projects
+              <i
+                class="bi bi-arrow-right group-hover:translate-x-1 transition-transform duration-300"
+              ></i>
+            </span>
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
           </NuxtLink>
-        </motion>
+        </div>
       </div>
     </div>
   </section>

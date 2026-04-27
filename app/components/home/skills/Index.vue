@@ -100,66 +100,62 @@ const toolsSkills = ref([
       <!-- Section Header -->
       <div class="text-center mb-16 animate-fade-in-up">
         <!-- Badge -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-6"
         >
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-6"
-          >
-            <span class="text-cyan-300 text-sm font-medium">Tech Stack</span>
-          </div>
-        </motion>
+          <span class="text-cyan-300 text-sm font-medium">Tech Stack</span>
+        </div>
 
         <!-- Title -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <h2
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
         >
-          <h2
-            class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
-          >
-            Skills & Technologies
-          </h2>
-        </motion>
+          Skills & Technologies
+        </h2>
 
         <!-- Description -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <p
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit of modern technologies I use to build
-            exceptional digital experiences
-          </p>
-        </motion>
+          A comprehensive toolkit of modern technologies I use to build
+          exceptional digital experiences
+        </p>
       </div>
 
       <!-- Skills Categories -->
       <div class="space-y-12">
         <!-- Frontend Development -->
         <div>
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="flex items-center gap-3 mb-6 group"
           >
-            <div class="flex items-center gap-3 mb-6 group">
-              <div
-                class="h-12 aspect-square flex justify-center items-center rounded-xl bg-gradient-to-r from-cyan-400/10 to-purple-400/10 border border-cyan-400/30 group-hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <i class="bi bi-code-slash text-2xl text-cyan-400"></i>
-              </div>
-              <h3
-                class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-              >
-                Frontend
-              </h3>
+            <div
+              class="h-12 aspect-square flex justify-center items-center rounded-xl bg-gradient-to-r from-cyan-400/10 to-purple-400/10 border border-cyan-400/30 group-hover:border-cyan-400/50 transition-all duration-300"
+            >
+              <i class="bi bi-code-slash text-2xl text-cyan-400"></i>
             </div>
-          </motion>
+            <h3
+              class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
+            >
+              Frontend
+            </h3>
+          </div>
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <LazyHomeSkillsFrontEndSkillCard
@@ -172,24 +168,24 @@ const toolsSkills = ref([
 
         <!-- Backend Development -->
         <div>
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="flex items-center gap-3 mb-6 group"
           >
-            <div class="flex items-center gap-3 mb-6 group">
-              <div
-                class="h-12 aspect-square flex justify-center items-center rounded-xl bg-gradient-to-r from-purple-400/10 to-pink-400/10 border border-purple-400/30 group-hover:border-purple-400/50 transition-all duration-300"
-              >
-                <i class="bi bi-hdd-stack text-2xl text-purple-400"></i>
-              </div>
-              <h3
-                class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-              >
-                Backend
-              </h3>
+            <div
+              class="h-12 aspect-square flex justify-center items-center rounded-xl bg-gradient-to-r from-purple-400/10 to-pink-400/10 border border-purple-400/30 group-hover:border-purple-400/50 transition-all duration-300"
+            >
+              <i class="bi bi-hdd-stack text-2xl text-purple-400"></i>
             </div>
-          </motion>
+            <h3
+              class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            >
+              Backend
+            </h3>
+          </div>
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <LazyHomeSkillsBackEndSkillCard
@@ -202,24 +198,24 @@ const toolsSkills = ref([
 
         <!-- Tools & Others -->
         <div>
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="flex items-center gap-3 mb-6 group"
           >
-            <div class="flex items-center gap-3 mb-6 group">
-              <div
-                class="h-12 aspect-square flex justify-center items-center rounded-xl bg-gradient-to-r from-pink-400/10 to-cyan-400/10 border border-pink-400/30 group-hover:border-pink-400/50 transition-all duration-300"
-              >
-                <i class="bi bi-tools text-2xl text-pink-400"></i>
-              </div>
-              <h3
-                class="text-2xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent"
-              >
-                Tools & Others
-              </h3>
+            <div
+              class="h-12 aspect-square flex justify-center items-center rounded-xl bg-gradient-to-r from-pink-400/10 to-cyan-400/10 border border-pink-400/30 group-hover:border-pink-400/50 transition-all duration-300"
+            >
+              <i class="bi bi-tools text-2xl text-pink-400"></i>
             </div>
-          </motion>
+            <h3
+              class="text-2xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent"
+            >
+              Tools & Others
+            </h3>
+          </div>
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <LazyHomeSkillsToolsCard

@@ -37,83 +37,80 @@ onUnmounted(() => {
     <!-- Content -->
     <div class="z-10 max-w-6xl mx-auto px-6 text-center">
       <!-- Badge -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5 }"
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :duration="1000"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-8 animate-fade-in"
       >
-        <div
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-8 animate-fade-in"
+        <span class="relative flex h-2 w-2">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"
+          ></span>
+        </span>
+        <span class="text-cyan-300 text-sm font-medium"
+          >Open for freelace project</span
         >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
-            ></span>
-            <span
-              class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"
-            ></span>
-          </span>
-          <span class="text-cyan-300 text-sm font-medium"
-            >Open for freelace project</span
-          >
-        </div>
-      </motion>
+      </div>
 
       <!-- Main Heading -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 1, delay: 0.3 }"
+      <h1
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :delay="300"
+        :duration="1000"
+        class="text-5xl md:text-7xl max-w-2xl font-bold mb-6"
       >
-        <h1
-          class="text-5xl md:text-7xl max-w-2xl font-bold mb-6 animate-fade-in-up"
+        <span
+          class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
         >
-          <span
-            class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
-          >
-            Muhdani Boyrendi Erlan Azhari
-          </span>
-        </h1>
-      </motion>
+          Muhdani Boyrendi Erlan Azhari
+        </span>
+      </h1>
 
       <!-- Subheading with Rotating Text -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.6 }"
+      <p
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :delay="600"
+        :duration="1000"
+        class="text-lg md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto"
       >
-        <p
-          class="text-lg md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto animate-fade-in-up animation-delay-200"
-        >
-          <span class="text-cyan-400 font-semibold">
-            <Transition name="fade" mode="out-in">
-              <span :key="currentTitle">{{ currentTitle }}</span>
-            </Transition>
-          </span>
-        </p>
-      </motion>
+        <span class="text-cyan-400 font-semibold">
+          <Transition name="fade" mode="out-in">
+            <span :key="currentTitle">{{ currentTitle }}</span>
+          </Transition>
+        </span>
+      </p>
 
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 1.2 }"
+      <p
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :delay="900"
+        :duration="1000"
+        class="text-gray-400 mb-12 max-w-2xl mx-auto"
       >
-        <p
-          class="text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up animation-delay-400"
-        >
-          Full Stack Developer specializing in modern web technologies. Connect
-          with me through my professional links and portfolio.
-        </p>
-      </motion>
+        Full Stack Developer specializing in modern web technologies. Connect
+        with me through my professional links and portfolio.
+      </p>
 
       <!-- CTA Buttons -->
       <div
         class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up animation-delay-600"
       >
-        <motion
-          :initial="{ opacity: 0, x: -30 }"
-          :animate="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 1.5 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :delay="1200"
+          :duration="1000"
         >
           <NuxtLink
             to="#projects"
@@ -121,12 +118,14 @@ onUnmounted(() => {
           >
             <span>View My Projects</span>
           </NuxtLink>
-        </motion>
+        </div>
 
-        <motion
-          :initial="{ opacity: 0, x: 30 }"
-          :animate="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 1.5 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :delay="1500"
+          :duration="1000"
         >
           <NuxtLink
             to="#contact"
@@ -138,7 +137,7 @@ onUnmounted(() => {
               >→</span
             >
           </NuxtLink>
-        </motion>
+        </div>
       </div>
     </div>
 
@@ -155,7 +154,8 @@ onUnmounted(() => {
 
 <style scoped>
 .grid-pattern {
-  background-image: linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
   background-size: 120px 120px;
   width: 100%;
@@ -164,7 +164,9 @@ onUnmounted(() => {
 }
 
 .neon-text {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3),
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.5),
+    0 0 20px rgba(6, 182, 212, 0.3),
     0 0 30px rgba(6, 182, 212, 0.2);
 }
 

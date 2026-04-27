@@ -14,125 +14,100 @@
         <!-- Left Content -->
         <div class="space-y-6 animate-fade-in-left">
           <!-- Badge -->
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm"
           >
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm"
-            >
-              <span class="text-cyan-300 text-sm font-medium">About Me</span>
-            </div>
-          </motion>
+            <span class="text-cyan-300 text-sm font-medium">About Me</span>
+          </div>
 
           <!-- Title -->
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+          <h2
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
           >
-            <h2
-              class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
-            >
-              Building Digital Experiences
-            </h2>
-          </motion>
+            Building Digital Experiences
+          </h2>
 
           <!-- Description -->
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+          <p
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="text-gray-300 text-lg leading-relaxed"
           >
-            <p class="text-gray-300 text-lg leading-relaxed">
-              Hi! I'm
-              <span class="text-cyan-400 font-semibold"
-                >Muhdani Boyrendi Erlan Azhari</span
-              >
-              usually called
-              <span class="text-cyan-400 font-semibold">Erlan</span>, a
-              passionate Full Stack Developer with expertise in modern web
-              technologies. I specialize in creating beautiful, functional, and
-              user-centered digital experiences.
-            </p>
-          </motion>
-
-          <motion
-            :initial="{ opacity: 0, x: -20 }"
-            :whileInView="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
-          >
-            <p class="text-gray-400 leading-relaxed">
-              With a strong foundation in both frontend and backend development,
-              I bring ideas to life through clean code and innovative solutions.
-              My goal is to build applications that not only look great but also
-              deliver exceptional performance, user experience, and solve
-              real-world problems.
-            </p>
-          </motion>
-
-          <!-- Action Buttons -->
-          <!-- <div class="flex flex-wrap gap-4 pt-4">
-            <motion
-              :initial="{ opacity: 0, x: -20 }"
-              :whileInView="{ opacity: 1, x: 0 }"
-              :transition="{ duration: 0.5, delay: 0.3 }"
+            Hi! I'm
+            <span class="text-cyan-400 font-semibold"
+              >Muhdani Boyrendi Erlan Azhari</span
             >
-              <button
-                class="group relative px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
-              >
-                <span class="relative z-10 flex items-center gap-2">
-                  Download CV
-                  <i class="bi bi-download"></i>
-                </span>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                ></div>
-              </button>
-            </motion>
-          </div> -->
+            usually called
+            <span class="text-cyan-400 font-semibold">Erlan</span>, a passionate
+            Full Stack Developer with expertise in modern web technologies. I
+            specialize in creating beautiful, functional, and user-centered
+            digital experiences.
+          </p>
+
+          <p
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :visibleOnce="{ opacity: 1, x: 0 }"
+            :duration="1000"
+            class="text-gray-400 leading-relaxed"
+          >
+            With a strong foundation in both frontend and backend development, I
+            bring ideas to life through clean code and innovative solutions. My
+            goal is to build applications that not only look great but also
+            deliver exceptional performance, user experience, and solve
+            real-world problems.
+          </p>
         </div>
 
         <!-- Right Content - Photo -->
-        <motion
-          :initial="{ opacity: 0, x: 20 }"
-          :whileInView="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, x: 50 }"
+          :visibleOnce="{ opacity: 1, x: 0 }"
+          :duration="1000"
+          class="relative animate-fade-in-right flex justify-end"
         >
-          <div class="relative animate-fade-in-right flex justify-end">
-            <div class="relative group w-full max-w-sm mx-auto md:mx-0">
-              <!-- Gradient Border Container -->
-              <div
-                class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-500 animate-pulse-slow"
-              ></div>
+          <div class="relative group w-full max-w-sm mx-auto md:mx-0">
+            <!-- Gradient Border Container -->
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-500 animate-pulse-slow"
+            ></div>
 
-              <!-- Image Container -->
+            <!-- Image Container -->
+            <div
+              class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-cyan-400/30"
+            >
+              <!-- Placeholder for Profile Photo -->
               <div
-                class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-cyan-400/30"
+                class="aspect-square flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900"
               >
-                <!-- Placeholder for Profile Photo -->
-                <div
-                  class="aspect-square flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900"
-                >
-                  <!-- Replace this with actual image -->
-                  <NuxtImg
-                    src="/favicon.png"
-                    width="400"
-                    height="400"
-                    alt="Muhdani Boyrendi Erlan Azhari"
-                    class="w-full h-full object-cover object-center"
-                  />
+                <!-- Replace this with actual image -->
+                <NuxtImg
+                  src="/favicon.png"
+                  width="400"
+                  height="400"
+                  alt="Muhdani Boyrendi Erlan Azhari"
+                  class="w-full h-full object-cover object-center"
+                />
 
-                  <!-- Overlay gradient -->
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"
-                  ></div>
-                </div>
+                <!-- Overlay gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"
+                ></div>
               </div>
             </div>
           </div>
-        </motion>
+        </div>
       </div>
     </div>
   </section>

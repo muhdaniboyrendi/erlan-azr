@@ -82,54 +82,52 @@ const accessoriesItems = ref([
       <!-- Section Header -->
       <div class="text-center mb-16">
         <!-- Badge -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-6"
         >
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-6"
-          >
-            <span class="text-cyan-300 text-sm font-medium">My Setup</span>
-          </div>
-        </motion>
+          <span class="text-cyan-300 text-sm font-medium">My Setup</span>
+        </div>
 
         <!-- Title -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <h2
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text"
         >
-          <h2
-            class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text"
-          >
-            What I Use
-          </h2>
-        </motion>
+          What I Use
+        </h2>
 
         <!-- Description -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <p
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            A detailed look at the hardware, software, and tools that power my
-            daily development workflow
-          </p>
-        </motion>
+          A detailed look at the hardware, software, and tools that power my
+          daily development workflow
+        </p>
       </div>
 
       <!-- Categories Tabs -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :whileInView="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
-      >
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <div
+          v-for="(category, index) in categories"
+          :key="category"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :delay="index * 200"
+          :duration="1000"
+        >
           <button
-            v-for="category in categories"
-            :key="category"
             @click="activeCategory = category"
             :class="[
               'px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center gap-2',
@@ -141,19 +139,20 @@ const accessoriesItems = ref([
             {{ category }}
           </button>
         </div>
-      </motion>
+      </div>
 
       <!-- Hardware Items Grid -->
       <div
         v-if="activeCategory === 'Hardware'"
         class="grid md:grid-cols-2 gap-4 md:gap-6"
       >
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
           v-for="(item, index) in hardwareItems"
           :key="index"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
         >
           <div
             class="group relative rounded-2xl bg-dark border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(6,182,212,0.2)] overflow-hidden"
@@ -241,7 +240,7 @@ const accessoriesItems = ref([
               class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
             ></div>
           </div>
-        </motion>
+        </div>
       </div>
 
       <!-- Accessories Items Grid -->
@@ -249,12 +248,13 @@ const accessoriesItems = ref([
         v-if="activeCategory === 'Accessories'"
         class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
       >
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
           v-for="(item, index) in accessoriesItems"
           :key="index"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
         >
           <div
             class="group relative rounded-2xl bg-dark border border-purple-400/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(244,114,182,0.2)] overflow-hidden"
@@ -279,64 +279,64 @@ const accessoriesItems = ref([
               <p class="text-gray-500 text-xs">{{ item.description }}</p>
             </div>
           </div>
-        </motion>
+        </div>
       </div>
 
       <!-- Workspace Image Section -->
-      <motion
-        :initial="{ opacity: 0, y: 20 }"
-        :whileInView="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :visibleOnce="{ opacity: 1, y: 0 }"
+        :duration="1000"
+        class="mt-16"
       >
-        <div class="mt-16">
-          <div class="relative group">
-            <!-- Gradient Border -->
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"
-            ></div>
+        <div class="relative group">
+          <!-- Gradient Border -->
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"
+          ></div>
 
-            <!-- Image Container -->
+          <!-- Image Container -->
+          <div
+            class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-cyan-400/30"
+          >
             <div
-              class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-cyan-400/30"
+              class="aspect-video flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900"
             >
+              <NuxtImg
+                src="/img/setup.jpg"
+                alt="Workspace Setup"
+                width="640"
+                height="360"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
               <div
-                class="aspect-video flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900"
-              >
-                <NuxtImg
-                  src="/img/setup.jpg"
-                  alt="Workspace Setup"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"
-                ></div>
-              </div>
+                class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"
+              ></div>
+            </div>
 
-              <!-- Info Overlay -->
-              <div class="absolute bottom-0 left-0 right-0 p-4 md:p-8">
-                <div
-                  class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark/30 backdrop-blur-xl border border-cyan-400/30"
-                >
-                  <div class="relative flex h-3 w-3">
-                    <span
-                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
-                    ></span>
-                    <span
-                      class="relative inline-flex rounded-full h-3 w-3 bg-cyan-400"
-                    ></span>
-                  </div>
-                  <span class="text-white text-sm font-medium"
-                    >My Current Workspace</span
-                  >
+            <!-- Info Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-8">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark/30 backdrop-blur-xl border border-cyan-400/30"
+              >
+                <div class="relative flex h-3 w-3">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-3 w-3 bg-cyan-400"
+                  ></span>
                 </div>
+                <span class="text-white text-sm font-medium"
+                  >My Current Workspace</span
+                >
               </div>
             </div>
           </div>
         </div>
-      </motion>
+      </div>
     </div>
   </section>
 </template>

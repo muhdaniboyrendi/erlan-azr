@@ -96,55 +96,53 @@ const socialLinks = ref([
       <!-- Section Header -->
       <div class="text-center mb-16">
         <!-- Badge -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-6"
         >
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm mb-6"
-          >
-            <span class="text-cyan-300 text-sm font-medium">Contact me</span>
-          </div>
-        </motion>
+          <span class="text-cyan-300 text-sm font-medium">Contact me</span>
+        </div>
 
         <!-- Title -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <h2
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text"
         >
-          <h2
-            class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text"
-          >
-            Let's Connect
-          </h2>
-        </motion>
+          Let's Connect
+        </h2>
 
         <!-- Description -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <p
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-gray-400 text-lg max-w-2xl mx-auto mb-8"
         >
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-            Have a project in mind or just want to chat? Feel free to reach out
-            through any of these platforms. I'm always excited to connect with
-            new people!
-          </p>
-        </motion>
+          Have a project in mind or just want to chat? Feel free to reach out
+          through any of these platforms. I'm always excited to connect with new
+          people!
+        </p>
       </div>
 
       <!-- Social Media Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-16">
-        <motion
+        <div
           v-for="(social, index) in socialLinks"
           :key="index"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :delay="index * 200"
+          :duration="1000"
           class="group relative rounded-2xl bg-dark border overflow-hidden"
           :class="social.borderColor"
-          :initial="{ opacity: 0, y: 30 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
         >
           <a :href="social.url" target="_blank">
             <!-- Background Gradient on Hover -->
@@ -186,7 +184,7 @@ const socialLinks = ref([
               ></i>
             </div>
           </a>
-        </motion>
+        </div>
       </div>
     </div>
   </section>
