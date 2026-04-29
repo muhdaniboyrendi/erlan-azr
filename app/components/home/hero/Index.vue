@@ -25,15 +25,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section
-    id="home"
-    class="flex items-center justify-center overflow-hidden bg-linear-to-br from-dark to-gray-950 pt-40 pb-12"
-  >
-    <!-- Grid Background -->
-    <div class="absolute inset-0 opacity-20">
-      <div class="grid-pattern"></div>
-    </div>
-
+  <section id="home" class="flex items-center justify-center pt-40 pb-12">
     <!-- Content -->
     <div class="z-10 max-w-6xl mx-auto px-6 text-center">
       <!-- Badge -->
@@ -153,16 +145,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 120px 120px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(6, 182, 212, 0.5),
@@ -183,21 +165,6 @@ onUnmounted(() => {
 
 .animate-scroll {
   animation: scroll 1.5s ease-in-out infinite;
-}
-
-/* Decorative Animations */
-@keyframes pulse-slow {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
 }
 
 /* Fade Transition for Rotating Text */

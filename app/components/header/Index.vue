@@ -23,10 +23,6 @@ const pageList = ref([
     path: "/#business",
   },
   {
-    label: "Organizations",
-    path: "/#organizations",
-  },
-  {
     label: "Uses",
     path: "/#uses",
   },
@@ -54,7 +50,7 @@ const closeMobileMenu = () => {
     <div class="w-full max-w-7xl flex justify-between gap-4">
       <div
         :class="[
-          'w-fit h-fit flex transition-all duration-500 p-2 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)] rounded-2xl border justify-between',
+          'w-fit h-fit flex transition-all duration-500 p-2 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 rounded-2xl border justify-between',
         ]"
       >
         <NuxtLink to="/">
@@ -68,7 +64,7 @@ const closeMobileMenu = () => {
       </div>
       <div
         :class="[
-          'w-full md:w-fit flex flex-wrap transition-all duration-500 p-4 md:py-6 md:px-12 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.15)] rounded-2xl border',
+          'w-full md:w-fit flex flex-wrap transition-all duration-500 p-4 md:py-6 md:px-12 bg-gray-900/50 backdrop-blur-xl border-cyan-400/30  rounded-2xl border',
         ]"
       >
         <!-- Desktop Menu -->
@@ -127,9 +123,3 @@ const closeMobileMenu = () => {
     </div>
   </nav>
 </template>
-
-<style scoped>
-.neon-text {
-  text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-}
-</style>

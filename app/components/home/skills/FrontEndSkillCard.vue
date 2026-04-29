@@ -4,6 +4,10 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  index: {
+    type: Number,
+    required: true,
+  },
 });
 </script>
 
@@ -12,6 +16,7 @@ const props = defineProps({
     v-motion
     :initial="{ opacity: 0, y: 100 }"
     :visibleOnce="{ opacity: 1, y: 0 }"
+    :delay="index * 100"
     :duration="1000"
   >
     <div

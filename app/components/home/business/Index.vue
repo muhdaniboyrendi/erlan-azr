@@ -1,13 +1,8 @@
 <template>
   <section
     id="business"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-4 md:px-6"
+    class="relative min-h-screen flex items-center justify-center py-20 px-4 md:px-6"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <!-- Section Header -->
@@ -69,7 +64,7 @@
               <!-- Left: Image -->
               <div class="relative aspect-[4/3] h-96 md:h-auto overflow-hidden">
                 <NuxtImg
-                  src="/projects/ea-invitation.png"
+                  src="/projects/ea-invitation.webp"
                   alt="Featured Business"
                   width="400"
                   height="300"
@@ -90,15 +85,6 @@
 
               <!-- Right: Content -->
               <div class="p-6 md:p-8 flex flex-col justify-center">
-                <!-- Category -->
-                <div class="flex items-center gap-2 mb-4">
-                  <span
-                    class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-400/20 border border-purple-400/30 text-purple-100"
-                  >
-                    Beta
-                  </span>
-                </div>
-
                 <!-- Title -->
                 <h3
                   class="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
@@ -178,16 +164,6 @@
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
-  background-size: 120px 120px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(168, 85, 247, 0.5),

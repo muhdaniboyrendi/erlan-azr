@@ -1,6 +1,17 @@
 <script setup>
 const projects = ref([
   {
+    title: "Presence App with QR",
+    description:
+      "A webapp to manage generuses and their presence with QR code scan in Karanganyar Timur 1.",
+    image: "/projects/presensi-qr.webp",
+    tags: ["Web App"],
+    techStack: ["Laravel", "Inertia", "Vue.js", "Tailwind CSS", "MySQL"],
+    liveUrl: null,
+    githubUrl: "https://github.com/muhdaniboyrendi/kratim1-presensi-qr",
+    year: "2026",
+  },
+  {
     title: "Photobooth KraTim 1",
     description:
       "A website to make a photo strip at Bazar and Futsal event in Karanganyar Timur 1.",
@@ -16,10 +27,10 @@ const projects = ref([
     title: "EA Invitation",
     description:
       "A SaaS application for creating and managing digital wedding invitations.",
-    image: "/projects/ea-invitation.png",
+    image: "/projects/ea-invitation.webp",
     tags: ["Web App"],
-    techStack: ["Nuxt", "Tailwind CSS", "Laravel", "MySQL"],
-    liveUrl: "https://ea-invitation-landing.vercel.app/",
+    techStack: ["Nuxt", "Tailwind CSS", "Laravel", "FrankenPHP", "PostgreSQL"],
+    liveUrl: "https://eainvitation.com",
     githubUrl: "https://github.com/muhdaniboyrendi/ea-invitation-landing",
     year: "2025",
   },
@@ -39,13 +50,8 @@ const projects = ref([
 <template>
   <section
     id="projects"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-4 md:px-6"
+    class="relative min-h-screen flex items-center justify-center py-20 px-4 md:px-6"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <!-- Section Header -->
@@ -159,6 +165,7 @@ const projects = ref([
               >
                 <div class="flex items-center gap-4 text-xs text-gray-400">
                   <a
+                    v-if="project.liveUrl"
                     :href="project.liveUrl"
                     target="_blank"
                     aria-label="Live demo"
@@ -167,6 +174,7 @@ const projects = ref([
                     <i class="bi bi-box-arrow-up-right text-base"></i>
                   </a>
                   <a
+                    v-if="project.githubUrl"
                     :href="project.githubUrl"
                     target="_blank"
                     aria-label="View source code"
@@ -211,16 +219,6 @@ const projects = ref([
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
-  background-size: 60px 60px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(168, 85, 247, 0.5),

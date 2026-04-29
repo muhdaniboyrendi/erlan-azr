@@ -1,13 +1,8 @@
 <template>
   <section
     id="about"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-4 md:px-6"
+    class="relative min-h-screen flex items-center justify-center py-20 px-4 md:px-6"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -114,16 +109,6 @@
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 60px 60px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(6, 182, 212, 0.5),

@@ -1,12 +1,11 @@
+<script setup>
+const currentYear = computed(() => new Date().getFullYear());
+</script>
+
 <template>
   <footer
     class="relative bg-gradient-to-br from-gray-950 to-black border-t border-cyan-400/20 overflow-hidden"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <div class="relative z-10 max-w-7xl mx-auto px-6 py-12">
       <!-- Main Footer Content -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -40,12 +39,12 @@
               ></div>
             </a>
             <a
-              href="https://www.linkedin.com/in/muhdani-boyrendi/"
+              href="https://www.tiktok.com/@erlan.azr"
               target="_blank"
-              aria-label="Visit linkedin"
+              aria-label="Visit tiktok"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
-              <i class="bi bi-linkedin text-lg"></i>
+              <i class="bi bi-tiktok text-lg"></i>
               <div
                 class="absolute inset-0 rounded-lg bg-cyan-400/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
@@ -62,12 +61,12 @@
               ></div>
             </a>
             <a
-              href="https://www.tiktok.com/@erlan.azr"
+              href="https://www.linkedin.com/in/muhdani-boyrendi/"
               target="_blank"
-              aria-label="Visit tiktok"
+              aria-label="Visit linkedin"
               class="group relative w-10 h-10 flex items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/5 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 hover:scale-110"
             >
-              <i class="bi bi-tiktok text-lg"></i>
+              <i class="bi bi-linkedin text-lg"></i>
               <div
                 class="absolute inset-0 rounded-lg bg-cyan-400/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
@@ -224,37 +223,3 @@
     </div>
   </footer>
 </template>
-
-<script setup>
-const currentYear = computed(() => new Date().getFullYear());
-</script>
-
-<style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px);
-  background-size: 120px 120px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 30s linear infinite;
-}
-
-@keyframes pulse-slow {
-  0%,
-  100% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 8s ease-in-out infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-</style>

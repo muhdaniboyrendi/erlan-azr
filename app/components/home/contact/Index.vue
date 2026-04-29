@@ -14,17 +14,17 @@ const socialLinks = ref([
       "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text",
   },
   {
-    name: "LinkedIn",
-    handle: "muhdani boyrendi",
-    url: "https://linkedin.com/in/muhdani-boyrendi",
-    icon: "bi-linkedin",
-    iconBg: "bg-gradient-to-br from-blue-400/20 to-cyan-400/20",
-    iconColor: "text-blue-400 group-hover:text-white",
+    name: "Tik Tok",
+    handle: "@erlan.azr",
+    url: "https://www.tiktok.com/@erlan.azr?_r=1&_t=ZS-93Udhi6SGyD",
+    icon: "bi-tiktok",
+    iconBg: "bg-gradient-to-br from-cyan-300/20 to-pink-400/20",
+    iconColor: "text-gray-200 group-hover:text-white",
     borderColor:
-      "border-blue-400/20 hover:border-blue-400/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]",
-    gradientBg: "bg-gradient-to-br from-blue-400/5 to-cyan-400/5",
+      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
+    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
     titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text",
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
   },
   {
     name: "GitHub",
@@ -66,17 +66,17 @@ const socialLinks = ref([
       "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text",
   },
   {
-    name: "Tik Tok",
-    handle: "@erlan.azr",
-    url: "https://www.tiktok.com/@erlan.azr?_r=1&_t=ZS-93Udhi6SGyD",
-    icon: "bi-tiktok",
-    iconBg: "bg-gradient-to-br from-cyan-300/20 to-pink-400/20",
-    iconColor: "text-gray-200 group-hover:text-white",
+    name: "LinkedIn",
+    handle: "muhdani boyrendi",
+    url: "https://linkedin.com/in/muhdani-boyrendi",
+    icon: "bi-linkedin",
+    iconBg: "bg-gradient-to-br from-blue-400/20 to-cyan-400/20",
+    iconColor: "text-blue-400 group-hover:text-white",
     borderColor:
-      "border-indigo-400/20 hover:border-indigo-400/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]",
-    gradientBg: "bg-gradient-to-br from-indigo-400/5 to-purple-400/5",
+      "border-blue-400/20 hover:border-blue-400/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]",
+    gradientBg: "bg-gradient-to-br from-blue-400/5 to-cyan-400/5",
     titleHover:
-      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text",
+      "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text",
   },
 ]);
 </script>
@@ -84,13 +84,8 @@ const socialLinks = ref([
 <template>
   <section
     id="contact"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark py-20 px-4 md:px-6"
+    class="relative min-h-screen flex items-center justify-center py-20 px-4 md:px-6"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-6xl mx-auto w-full">
       <!-- Section Header -->
@@ -191,16 +186,6 @@ const socialLinks = ref([
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 60px 60px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(6, 182, 212, 0.5),

@@ -1,6 +1,17 @@
 <script setup>
 const projects = ref([
   {
+    title: "Presence App with QR",
+    description:
+      "A webapp to manage generuses and their presence with QR code scan in Karanganyar Timur 1.",
+    image: "/projects/presensi-qr.webp",
+    tags: ["Web App"],
+    techStack: ["Laravel", "Inertia", "Vue.js", "Tailwind CSS", "MySQL"],
+    liveUrl: null,
+    githubUrl: "https://github.com/muhdaniboyrendi/kratim1-presensi-qr",
+    year: "2026",
+  },
+  {
     title: "Photobooth KraTim 1",
     description:
       "A website to make a photo strip at Bazar and Futsal event in Karanganyar Timur 1.",
@@ -16,22 +27,12 @@ const projects = ref([
     title: "EA Invitation",
     description:
       "A SaaS application for creating and managing digital wedding invitations.",
-    image: "/projects/ea-invitation.png",
+    image: "/projects/ea-invitation.webp",
     tags: ["Web App"],
-    techStack: ["Nuxt", "Tailwind CSS", "Laravel", "MySQL"],
-    liveUrl: "https://ea-invitation-landing.vercel.app/",
+    techStack: ["Nuxt", "Tailwind CSS", "Laravel", "FrankenPHP", "PostgreSQL"],
+    liveUrl: "https://eainvitation.com",
     githubUrl: "https://github.com/muhdaniboyrendi/ea-invitation-landing",
     year: "2025",
-  },
-  {
-    title: "Student Management",
-    description: "A website to manage students and teachers.",
-    image: "/projects/student-management.png",
-    tags: ["Web App"],
-    techStack: ["Vue.js", "Tailwind CSS", "Laravel", "MySQL"],
-    liveUrl: "https://personal-notes-tawny-five.vercel.app/",
-    githubUrl: "https://github.com/muhdaniboyrendi/personal-notes",
-    year: "2024",
   },
   {
     title: "Note App",
@@ -49,64 +50,57 @@ const projects = ref([
 <template>
   <section
     id="projects"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-bl from-gray-950 to-dark pt-40 pb-28 px-4 md:px-6"
+    class="relative min-h-screen flex items-center justify-center pt-40 pb-28 px-4 md:px-6"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <!-- Section Header -->
       <div class="text-center mb-16">
         <!-- Badge -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-400/10 backdrop-blur-sm mb-6"
         >
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-400/10 backdrop-blur-sm mb-6"
-          >
-            <span class="text-purple-300 text-sm font-medium">Portfolio</span>
-          </div>
-        </motion>
+          <span class="text-purple-300 text-sm font-medium">Portfolio</span>
+        </div>
 
         <!-- Title -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <h1
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"
         >
-          <h2
-            class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"
-          >
-            Featured Projects
-          </h2>
-        </motion>
+          Featured Projects
+        </h1>
 
         <!-- Description -->
-        <motion
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+        <p
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :duration="1000"
+          class="text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            Showcasing my recent work and personal projects that demonstrate my
-            expertise in modern web development
-          </p>
-        </motion>
+          Showcasing my recent work and personal projects that demonstrate my
+          expertise in modern web development
+        </p>
       </div>
 
       <!-- Projects Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        <motion
+        <div
           v-for="(project, index) in projects"
           :key="index"
-          :initial="{ opacity: 0, y: 20 }"
-          :whileInView="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.3 }"
+          v-motion
+          :initial="{ opacity: 0, y: 50 }"
+          :visibleOnce="{ opacity: 1, y: 0 }"
+          :delay="index * 200"
+          :duration="1000"
         >
           <div
             class="group relative rounded-2xl overflow-hidden bg-dark border border-purple-400/20 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]"
@@ -143,11 +137,11 @@ const projects = ref([
             <!-- Project Content -->
             <div class="p-6">
               <!-- Title -->
-              <h3
+              <h2
                 class="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300"
               >
                 {{ project.title }}
-              </h3>
+              </h2>
 
               <!-- Description -->
               <p class="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -171,6 +165,7 @@ const projects = ref([
               >
                 <div class="flex items-center gap-4 text-xs text-gray-400">
                   <a
+                    v-if="project.liveUrl"
                     :href="project.liveUrl"
                     target="_blank"
                     aria-label="Live demo"
@@ -179,6 +174,7 @@ const projects = ref([
                     <i class="bi bi-box-arrow-up-right text-base"></i>
                   </a>
                   <a
+                    v-if="project.githubUrl"
                     :href="project.githubUrl"
                     target="_blank"
                     aria-label="View source code"
@@ -191,48 +187,17 @@ const projects = ref([
               </div>
             </div>
           </div>
-        </motion>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px);
-  background-size: 60px 60px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(168, 85, 247, 0.5),
     0 0 20px rgba(168, 85, 247, 0.3),
     0 0 30px rgba(168, 85, 247, 0.2);
-}
-
-@keyframes blob {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
 }
 </style>

@@ -88,13 +88,8 @@ const toolsSkills = ref([
 <template>
   <section
     id="skills"
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark to-gray-950 py-20 px-4 md:px-6"
+    class="relative min-h-screen flex items-center justify-center py-20 px-4 md:px-6"
   >
-    <!-- Animated Grid Background -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="grid-pattern"></div>
-    </div>
-
     <!-- Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto w-full">
       <!-- Section Header -->
@@ -159,9 +154,10 @@ const toolsSkills = ref([
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <LazyHomeSkillsFrontEndSkillCard
-              v-for="skill in frontendSkills"
-              :key="skill.name"
+              v-for="(skill, index) in frontendSkills"
+              :key="index"
               :skill="skill"
+              :index="index"
             />
           </div>
         </div>
@@ -189,9 +185,10 @@ const toolsSkills = ref([
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <LazyHomeSkillsBackEndSkillCard
-              v-for="skill in backendSkills"
-              :key="skill.name"
+              v-for="(skill, index) in backendSkills"
+              :key="index"
               :skill="skill"
+              :index="index"
             />
           </div>
         </div>
@@ -219,9 +216,10 @@ const toolsSkills = ref([
 
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <LazyHomeSkillsToolsCard
-              v-for="skill in toolsSkills"
-              :key="skill.name"
+              v-for="(skill, index) in toolsSkills"
+              :key="index"
               :skill="skill"
+              :index="index"
             />
           </div>
         </div>
@@ -231,16 +229,6 @@ const toolsSkills = ref([
 </template>
 
 <style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(6, 182, 212, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.5) 1px, transparent 1px);
-  background-size: 120px 120px;
-  width: 100%;
-  height: 100%;
-  animation: grid-move 20s linear infinite;
-}
-
 .neon-text {
   text-shadow:
     0 0 10px rgba(6, 182, 212, 0.5),
