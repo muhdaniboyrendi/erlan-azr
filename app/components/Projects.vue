@@ -1,6 +1,16 @@
 <script setup>
 const projects = ref([
   {
+    title: "Chaya Collection",
+    description: "A landing page website for my parent tailor business with Neubrutalism UI consept.",
+    image: "/projects/chaya-collection.png",
+    tags: ["Landing Page"],
+    techStack: ["Nuxt", "Tailwind CSS"],
+    liveUrl: "https://chaya-collection.netlify.app",
+    githubUrl: "https://github.com/muhdaniboyrendi/chaya-collection",
+    year: "2026",
+  },
+  {
     title: "Presence App with QR",
     description:
       "A webapp to manage generuses and their presence with QR code scan in Karanganyar Timur 1.",

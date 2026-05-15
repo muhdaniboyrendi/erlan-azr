@@ -1,6 +1,17 @@
 <script setup>
 const projects = ref([
   {
+    title: "Chaya Collection",
+    description:
+      "A landing page website for my parent tailor business with Neubrutalism UI consept.",
+    image: "/projects/chaya-collection.png",
+    tags: ["Landing Page"],
+    techStack: ["Nuxt", "Tailwind CSS"],
+    liveUrl: "https://chaya-collection.netlify.app",
+    githubUrl: "https://github.com/muhdaniboyrendi/chaya-collection",
+    year: "2026",
+  },
+  {
     title: "Presence App with QR",
     description:
       "A webapp to manage generuses and their presence with QR code scan in Karanganyar Timur 1.",
@@ -16,7 +27,7 @@ const projects = ref([
     description:
       "A website to make a photo strip at Bazar and Futsal event in Karanganyar Timur 1.",
     image: "/projects/b&f-photobooth.png",
-    tags: ["Web App"],
+    tags: ["Website"],
     techStack: ["Nuxt", "Tailwind CSS"],
     liveUrl: "https://karanganyar-timur-1-photobooth.vercel.app/",
     githubUrl:
@@ -28,7 +39,7 @@ const projects = ref([
     description:
       "A SaaS application for creating and managing digital wedding invitations.",
     image: "/projects/ea-invitation.webp",
-    tags: ["Web App"],
+    tags: ["SaaS"],
     techStack: ["Nuxt", "Tailwind CSS", "Laravel", "FrankenPHP", "PostgreSQL"],
     liveUrl: "https://eainvitation.com",
     githubUrl: "https://github.com/muhdaniboyrendi/ea-invitation-landing",
@@ -38,7 +49,7 @@ const projects = ref([
     title: "Note App",
     description: "A website that I created for practice React.js.",
     image: "/projects/note-app.png",
-    tags: ["Web App"],
+    tags: ["Website"],
     techStack: ["React.js", "Bootstrap"],
     liveUrl: "https://personal-notes-tawny-five.vercel.app/",
     githubUrl: "https://github.com/muhdaniboyrendi/personal-notes",
